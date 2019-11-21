@@ -1,0 +1,52 @@
+A -> B -> C -> A -> D -> E -> A
+check
+
+A_{Z_{AB}} -> A_{Z_{AB}}B
+B -> A_{Z_{AB}}
+
+S -> SF
+F -> S
+
+0 -> 01
+1 -> 0
+
+0 -> 1a0b0
+1 -> 11
+
+A -> B[A]A
+B -> BB
+
+A_a → A_a B A_a
+B → BBB
+
+M_{P_dFP_u} -> M_{P_dFP_u}FM_{P_dFP_u}
+F -> FFF
+
+S -> BAAAAAAAA
+BA -> AB
+A -> A
+
+Koch
+F → F L F R F R F L F
+F -> F L_{60} F R_{60} R_{60} F L_{60} F
+
+Sierpinski
+S → F L_{120} F_{#2} L_{120} F_{#2}
+F → F L_{120} F_{#2} R_{120} F R_{120} F_{#2} L_{120} F
+F_{#2} → F_{#2} F_{#2}
+
+Sierpinski Arrowhead
+F_{20/n} → F_{20/n #2} L_{60} F_{20/n} L_{60} F_{20/n #2}
+F_{20/n #2} → F_{20/n} R_{60} F_{20/n #2} R_{60} F_{20/n}
+
+Dragon Curve
+S → F X
+X → X R Y F R
+Y → L F X L Y
+
+Hilbert Curve
+L -> +RF-LFL-FR+
+R -> -LF+RFR+FL-
+
+S -> BAC
+B < A > C -> AA | BC

@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f738909a-4d35-48fe-a7bf-970a065d8622" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/SybelBlue$Scratch.coverage" NAME="Scratch Coverage Results" MODIFIED="1551250295774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$HW6Scratch.coverage" NAME="HW6Scratch Coverage Results" MODIFIED="1554757917162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
+    <SUITE FILE_PATH="coverage/SybelBlue$GroupBuilder.coverage" NAME="GroupBuilder Coverage Results" MODIFIED="1553230005306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$Misc.coverage" NAME="Misc Coverage Results" MODIFIED="1554673305419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/SybelBlue$HW1Scratch.coverage" NAME="HW1Scratch Coverage Results" MODIFIED="1549258689251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
+    <SUITE FILE_PATH="coverage/SybelBlue$GroupST.coverage" NAME="GroupST Coverage Results" MODIFIED="1553986590640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$HW4Scratch.coverage" NAME="HW4Scratch Coverage Results" MODIFIED="1551757899929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
+    <SUITE FILE_PATH="coverage/SybelBlue$Polynomial.coverage" NAME="Polynomial Coverage Results" MODIFIED="1555121863295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/SybelBlue$LSystem.coverage" NAME="LSystem Coverage Results" MODIFIED="1540681242440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/ConnBeyond" />
+    <SUITE FILE_PATH="coverage/SybelBlue$U20.coverage" NAME="U20 Coverage Results" MODIFIED="1551656625861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$U16.coverage" NAME="U16 Coverage Results" MODIFIED="1553138910854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$Nonogram.coverage" NAME="Nonogram Coverage Results" MODIFIED="1555131617741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/SybelBlue$HW5Scratch.coverage" NAME="HW5Scratch Coverage Results" MODIFIED="1552417806625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
+    <SUITE FILE_PATH="coverage/SybelBlue$Ackermann.coverage" NAME="Ackermann Coverage Results" MODIFIED="1540742386678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/SybelBlue$CLILSys.coverage" NAME="CLILSys Coverage Results" MODIFIED="1541098083936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/ConnBeyond" />
+    <SUITE FILE_PATH="coverage/SybelBlue$Z4xZ12.coverage" NAME="Z4xZ12 Coverage Results" MODIFIED="1553230936600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$HW2Scratch.coverage" NAME="HW2Scratch Coverage Results" MODIFIED="1550028764714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
+    <SUITE FILE_PATH="coverage/SybelBlue$TableMaker.coverage" NAME="TableMaker Coverage Results" MODIFIED="1551655289935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$STtest.coverage" NAME="STtest Coverage Results" MODIFIED="1551657606372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$U20test.coverage" NAME="U20test Coverage Results" MODIFIED="1551656257447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$LSystemParser.coverage" NAME="LSystemParser Coverage Results" MODIFIED="1552417442264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/ConnBeyond" />
+    <SUITE FILE_PATH="coverage/SybelBlue$DungeonMaker.coverage" NAME="DungeonMaker Coverage Results" MODIFIED="1540741754985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/SybelBlue$HW7Scratch.coverage" NAME="HW7Scratch Coverage Results" MODIFIED="1555547895071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
+    <SUITE FILE_PATH="coverage/SybelBlue$rainbow.coverage" NAME="rainbow Coverage Results" MODIFIED="1551074117209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$U30.coverage" NAME="U30 Coverage Results" MODIFIED="1551812712278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$PillowTest.coverage" NAME="PillowTest Coverage Results" MODIFIED="1540695617148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/SybelBlue$U24.coverage" NAME="U24 Coverage Results" MODIFIED="1551657325922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Abstract/GroupBuilder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Abstract/GroupST.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="30" selection-start-column="30" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Abstract/RuleMaker.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Abstract/LaTeXFunctions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2941">
+              <caret line="173" column="33" selection-start-line="173" selection-start-column="33" selection-end-line="173" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find />
+      <find>r*\s</find>
+      <find>node</find>
+      <find>F_{#0}</find>
+      <find>==</find>
+      <find>F_{#2}</find>
+      <find>t</find>
+      <find>speed</find>
+      <find>F</find>
+      <find>-</find>
+      <find>&lt;</find>
+      <find>cmd</find>
+      <find>x</find>
+      <find>ny</find>
+      <find>y</find>
+      <find>'st'</find>
+      <find>ttstttst</find>
+      <find>'ttt'</find>
+      <find>) == ent</find>
+      <find>l</find>
+      <find>+</find>
+      <find>F_{</find>
+      <find>F_{#1}</find>
+      <find>,\n</find>
+      <find>\n\(.*\)</find>
+      <find>\n.*but not both.*\n</find>
+      <find>soci 190</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>edge</replace>
+      <replace>F_{#2}</replace>
+      <replace>is</replace>
+      <replace>F_{#}</replace>
+      <replace>F_</replace>
+      <replace>F_{30/n}</replace>
+      <replace>-_{60}</replace>
+      <replace>depth</replace>
+      <replace>dest[0]</replace>
+      <replace>pos[1]</replace>
+      <replace>dest[1]</replace>
+      <replace>L_{60}</replace>
+      <replace>F_{#</replace>
+      <replace>F</replace>
+      <replace>,</replace>
+      <replace>\n</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/main/limit.py" />
+        <option value="$PROJECT_DIR$/main/tkinterExample.py" />
+        <option value="$PROJECT_DIR$/main/temp" />
+        <option value="$PROJECT_DIR$/main/GraphMaker.py" />
+        <option value="$PROJECT_DIR$/main/AverageDaylightLoss.py" />
+        <option value="$PROJECT_DIR$/main/testpda.jff" />
+        <option value="$PROJECT_DIR$/main/english.txt" />
+        <option value="$PROJECT_DIR$/main/temp.txt" />
+        <option value="$PROJECT_DIR$/main/L_Sys_Interpreter.py" />
+        <option value="$PROJECT_DIR$/main/conn-beyond/LSystem.py" />
+        <option value="$PROJECT_DIR$/main/conn-beyond/L_Sys_Interpreter.py" />
+        <option value="$PROJECT_DIR$/main/ConnBeyond/L_Sys_Interpreter.py" />
+        <option value="$PROJECT_DIR$/main/ConnBeyond/__init__.py" />
+        <option value="$PROJECT_DIR$/main/__init__.py" />
+        <option value="$PROJECT_DIR$/main/PillowTest.py" />
+        <option value="$PROJECT_DIR$/main/DungeonMaker.py" />
+        <option value="$PROJECT_DIR$/main/Ackermann.py" />
+        <option value="$PROJECT_DIR$/main/ConnBeyond/CLILSys.py" />
+        <option value="$PROJECT_DIR$/Algorithms/HW1Scratch.py" />
+        <option value="$PROJECT_DIR$/Algorithms/HW2Scratch.py" />
+        <option value="$PROJECT_DIR$/Abstract/rainbow.py" />
+        <option value="$PROJECT_DIR$/Abstract/ProjectScratch.py" />
+        <option value="$PROJECT_DIR$/Abstract/TableMaker.py" />
+        <option value="$PROJECT_DIR$/Abstract/test.py" />
+        <option value="$PROJECT_DIR$/Abstract/Scratch.py" />
+        <option value="$PROJECT_DIR$/Abstract/U20test.py" />
+        <option value="$PROJECT_DIR$/Abstract/U20.py" />
+        <option value="$PROJECT_DIR$/Abstract/U24.py" />
+        <option value="$PROJECT_DIR$/Abstract/STtest.py" />
+        <option value="$PROJECT_DIR$/Abstract/GroupBuilder.py" />
+        <option value="$PROJECT_DIR$/Algorithms/HW4Scratch.py" />
+        <option value="$PROJECT_DIR$/Abstract/U30.py" />
+        <option value="$PROJECT_DIR$/Abstract/Z24.py" />
+        <option value="$PROJECT_DIR$/main/ConnBeyond/LSystem.py" />
+        <option value="$PROJECT_DIR$/main/ConnBeyond/LSystemParser.py" />
+        <option value="$PROJECT_DIR$/Abstract/text_scratch.txt" />
+        <option value="$PROJECT_DIR$/Algorithms/HW5Scratch.py" />
+        <option value="$PROJECT_DIR$/Abstract/U16.py" />
+        <option value="$PROJECT_DIR$/Abstract/Z4xZ12.py" />
+        <option value="$PROJECT_DIR$/Abstract/GroupST.py" />
+        <option value="$PROJECT_DIR$/Algorithms/HW6Scratch.py" />
+        <option value="$PROJECT_DIR$/main/Nonogram.py" />
+        <option value="$PROJECT_DIR$/Algorithms/HW7Scratch.py" />
+        <option value="$PROJECT_DIR$/main/Polynomial.py" />
+        <option value="$PROJECT_DIR$/main/Z_2Poly.py" />
+        <option value="$PROJECT_DIR$/Abstract/LaTeXFunctions.py" />
+        <option value="$PROJECT_DIR$/Algorithms/HW8Scratch.py" />
+        <option value="$PROJECT_DIR$/Algorithms/FinalScratch.py" />
+        <option value="$PROJECT_DIR$/main/maze_maker.py" />
+        <option value="$PROJECT_DIR$/main/Misc.py" />
+        <option value="$PROJECT_DIR$/Abstract/RuleMaker.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="670" />
+    <option name="width" value="693" />
+    <option name="height" value="738" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last.edited.regexp" value="123a" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lbcdn\PycharmProjects\SybelBlue\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lbcdn\PycharmProjects\SybelBlue\main\ConnBeyond" />
+      <recent name="C:\Users\lbcdn\PycharmProjects\SybelBlue\main\conn-beyond" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.GroupBuilder">
+    <configuration name="FinalScratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SybelBlue" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithms" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithms/FinalScratch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GroupBuilder" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SybelBlue" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Abstract" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Abstract/GroupBuilder.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="HW8Scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SybelBlue" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithms" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithms/HW8Scratch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="L_Sys_Interpreter" type="PythonConfigurationType" factoryName="Python">
+      <module name="SybelBlue" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\lbcdn\PycharmProjects\SybelBlue\main\conn-beyond\L_Sys_Interpreter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Misc" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SybelBlue" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/Misc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="maze_maker" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SybelBlue" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/maze_maker.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.L_Sys_Interpreter" />
+      <item itemvalue="Python.HW8Scratch" />
+      <item itemvalue="Python.FinalScratch" />
+      <item itemvalue="Python.Misc" />
+      <item itemvalue="Python.maze_maker" />
+      <item itemvalue="Python.GroupBuilder" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.GroupBuilder" />
+        <item itemvalue="Python.Misc" />
+        <item itemvalue="Python.maze_maker" />
+        <item itemvalue="Python.FinalScratch" />
+        <item itemvalue="Python.HW8Scratch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_FIELDS,SHOW_INHERITED,ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f738909a-4d35-48fe-a7bf-970a065d8622" name="Default" comment="" />
+      <created>1524671380592</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1524671380592</updated>
+      <workItem from="1549142938333" duration="13486000" />
+      <workItem from="1549225796132" duration="6638000" />
+      <workItem from="1550026355637" duration="5000000" />
+      <workItem from="1550290771349" duration="16000" />
+      <workItem from="1550290793824" duration="2663000" />
+      <workItem from="1551045639301" duration="10687000" />
+      <workItem from="1551071041115" duration="5123000" />
+      <workItem from="1551125909332" duration="11342000" />
+      <workItem from="1551208881343" duration="16726000" />
+      <workItem from="1551249949186" duration="363000" />
+      <workItem from="1551491431473" duration="838000" />
+      <workItem from="1551557184080" duration="7237000" />
+      <workItem from="1551641124374" duration="2263000" />
+      <workItem from="1551655257205" duration="5715000" />
+      <workItem from="1551730641368" duration="399000" />
+      <workItem from="1551755663745" duration="4458000" />
+      <workItem from="1551812679503" duration="357000" />
+      <workItem from="1551821133726" duration="87000" />
+      <workItem from="1552076353789" duration="2011000" />
+      <workItem from="1552191705833" duration="2317000" />
+      <workItem from="1552348914072" duration="829000" />
+      <workItem from="1552415227654" duration="2444000" />
+      <workItem from="1553137540548" duration="415000" />
+      <workItem from="1553138329648" duration="1199000" />
+      <workItem from="1553213873711" duration="13000" />
+      <workItem from="1553229272675" duration="1775000" />
+      <workItem from="1553281195849" duration="845000" />
+      <workItem from="1553435255353" duration="2887000" />
+      <workItem from="1553819261828" duration="7000" />
+      <workItem from="1553912836136" duration="1119000" />
+      <workItem from="1553919890305" duration="188000" />
+      <workItem from="1553980449504" duration="6564000" />
+      <workItem from="1554333466358" duration="3327000" />
+      <workItem from="1554672719223" duration="10768000" />
+      <workItem from="1554755566501" duration="3076000" />
+      <workItem from="1555011855530" duration="2727000" />
+      <workItem from="1555102258569" duration="11987000" />
+      <workItem from="1555203082088" duration="6611000" />
+      <workItem from="1555223901597" duration="29000" />
+      <workItem from="1555441024998" duration="4036000" />
+      <workItem from="1555447081760" duration="1711000" />
+      <workItem from="1555545856249" duration="2236000" />
+      <workItem from="1555548395572" duration="681000" />
+      <workItem from="1555796614637" duration="10645000" />
+      <workItem from="1555877546749" duration="5377000" />
+      <workItem from="1555901138887" duration="2846000" />
+      <workItem from="1555987029060" duration="727000" />
+      <workItem from="1556163765817" duration="192000" />
+      <workItem from="1556310789916" duration="2780000" />
+      <workItem from="1556497845232" duration="3921000" />
+      <workItem from="1556590986750" duration="500000" />
+      <workItem from="1557001243761" duration="6371000" />
+      <workItem from="1557082375663" duration="404000" />
+      <workItem from="1557192209227" duration="3911000" />
+      <workItem from="1558462160457" duration="153000" />
+      <workItem from="1558843229844" duration="3504000" />
+      <workItem from="1559068244660" duration="77000" />
+      <workItem from="1560488486290" duration="1897000" />
+      <workItem from="1567776017334" duration="40000" />
+      <workItem from="1567776081257" duration="459000" />
+      <workItem from="1569962675987" duration="69000" />
+      <workItem from="1569972058996" duration="43000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="207116000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49685535" visible="true" weight="0.26652452" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32254046" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31419286" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3843594" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32917705" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3286334" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.20822942" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32886723" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
+      <window_info anchor="right" id="Structure" order="5" sideWeight="0.5041876" side_tool="true" visible="true" weight="0.17270789" />
+      <window_info anchor="right" id="SciView" order="6" sideWeight="0.4958124" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="7" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49685535" visible="true" weight="0.08959711" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32286024" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32004982" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38894907" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32917705" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3286334" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.20822942" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32886723" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
+      <window_info anchor="right" id="Structure" order="5" sideWeight="0.5041876" side_tool="true" weight="0.4511743" />
+      <window_info anchor="right" id="SciView" order="6" sideWeight="0.4958124" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="7" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main/GraphMaker.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main/DungeonMaker.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main/DungeonMaker.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Abstract/GroupBuilder.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main/ConnBeyond/LSystemParser.py</url>
+          <line>347</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main/Nonogram.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithms/HW7Scratch.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Algorithms/FinalScratch.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main/maze_maker.py</url>
+          <line>84</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self.solution" language="Python" />
+        <watch expression="self.toCheck" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SybelBlue$GroupBuilder.coverage" NAME="GroupBuilder Coverage Results" MODIFIED="1567776214532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$HW7Scratch.coverage" NAME="HW7Scratch Coverage Results" MODIFIED="1555548524625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
+    <SUITE FILE_PATH="coverage/SybelBlue$Misc.coverage" NAME="Misc Coverage Results" MODIFIED="1560490749867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/SybelBlue$Z_2Poly.coverage" NAME="Z_2Poly Coverage Results" MODIFIED="1555987145760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/SybelBlue$LaTeXFunctions.coverage" NAME="LaTeXFunctions Coverage Results" MODIFIED="1556313705017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$Polynomial.coverage" NAME="Polynomial Coverage Results" MODIFIED="1555877972657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/SybelBlue$FinalScratch.coverage" NAME="FinalScratch Coverage Results" MODIFIED="1557194598661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
+    <SUITE FILE_PATH="coverage/SybelBlue$maze_maker.coverage" NAME="maze_maker Coverage Results" MODIFIED="1558846647577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/SybelBlue$HW8Scratch.coverage" NAME="HW8Scratch Coverage Results" MODIFIED="1557002292965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>n &gt;= len(games)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>mid_cut &gt;= 79</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.solution == [['X', 'X', '1', 'X', 'X'], ['1', '1', 'X', 'X', '0'], ['X', '1', '1', '1', 'X'], ['1', '1', 'X', '1', 'X'], ['X', '1', '1', '1', '1']]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>&lt;class 'list'&gt;: [['X', 'X', '1', 'X', 'X'], ['1', '1', 'X', 'X', '0'], ['X', '1', '1', '1', 'X'], ['1', '1', 'X', '1', 'X'], ['X', '1', '1', '1', '1']] == self.solution</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(string) &gt; 5</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>clue == (3,)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>editted</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>edd</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(clue) &gt; 1</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>key not in elem</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="watch">
+      <expression>
+        <expression-string>self.toCheck</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.solution</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>reduction_map['st']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main/Ackermann.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="uml://Python/#C:/Users/lbcdn/PycharmProjects/SybelBlue/main/ConnBeyond/LSystem.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#C:/Users/lbcdn/PycharmProjects/SybelBlue/main/ConnBeyond/LSystem.py</OriginalElement>
+          <nodes>
+            <node x="" y="">main.ConnBeyond.LSystem.LSystem</node>
+            <node x="" y="">object</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="113.0" y="275.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/DungeonMaker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding>
+            <marker date="1540701604330" expanded="true" signature="48:53" ph="..." />
+            <marker date="1540701604330" expanded="true" signature="391:857" ph="..." />
+            <marker date="1540701604330" expanded="true" signature="980:1079" ph="..." />
+            <marker date="1540701604330" expanded="true" signature="1247:1840" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Abstract/rainbow.py" />
+    <entry file="file://$PROJECT_DIR$/Abstract/test.py" />
+    <entry file="file://$PROJECT_DIR$/Abstract/U24test.py" />
+    <entry file="file://$PROJECT_DIR$/Abstract/ProjectScratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Abstract/Scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Abstract/U20test.py" />
+    <entry file="file://$PROJECT_DIR$/Abstract/U20.py" />
+    <entry file="file://$PROJECT_DIR$/Abstract/TableMaker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="19" column="70" lean-forward="true" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Abstract/U24.py" />
+    <entry file="file://$PROJECT_DIR$/Abstract/STtest.py" />
+    <entry file="file://$PROJECT_DIR$/Abstract/U30.py" />
+    <entry file="file://$PROJECT_DIR$/Abstract/Z24.py" />
+    <entry file="file://$PROJECT_DIR$/main/ConnBeyond/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/ConnBeyond/CLILSys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="498" column="30" selection-start-line="498" selection-start-column="30" selection-end-line="498" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/ConnBeyond/LSystemParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2074">
+          <caret line="124" column="104" selection-start-line="124" selection-start-column="104" selection-end-line="124" selection-end-column="104" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1552080632552" expanded="true" signature="8956:8957" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Abstract/text_scratch.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/TKinterEx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/tkinterExample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/res/worldOfAvatar.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" selection-start-column="27" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/res/minnesotaLocations.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1410114897/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="4250" column="6" selection-start-line="4250" selection-start-column="6" selection-end-line="4250" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/temp.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/res/knapsackItems.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/res/chicagoLocations.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Nonogram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2193">
+          <caret line="129" column="23" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/res/shortListOfGames.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Polynomial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Z_2Poly.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/ConnBeyond/LSystem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/ConnBeyond/LSystemInterpreter1.0.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2193">
+          <caret line="130" selection-start-line="130" selection-end-line="155" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/HW8Scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="83" column="66" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/HW1Scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" selection-start-line="4" selection-end-line="37" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/HW5Scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/FinalScratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" selection-start-line="31" selection-end-line="72" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/limit.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/HW6Scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/HW4Scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/HW2Scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Abstract/Z4xZ12.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Abstract/U16.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/maze_maker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Misc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/HW7Scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="116" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Abstract/GroupBuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Abstract/GroupST.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Abstract/LaTeXFunctions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2941">
+          <caret line="173" column="33" selection-start-line="173" selection-start-column="33" selection-end-line="173" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Abstract/RuleMaker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
