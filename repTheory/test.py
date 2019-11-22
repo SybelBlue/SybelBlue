@@ -1,7 +1,6 @@
 from math import factorial
 
-from repTheory.Algebraic import Algebraic
-from repTheory.Perm import Perm
+from repTheory.BasicStructures import Perm, Algebraic
 from repTheory.Tableau import Tableau
 
 

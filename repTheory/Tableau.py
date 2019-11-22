@@ -1,4 +1,4 @@
-from repTheory.Perm import Perm
+from repTheory.BasicStructures import Perm
 
 
 class Tableau:
