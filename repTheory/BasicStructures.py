@@ -6,11 +6,11 @@ class Perm:
 
     @staticmethod
     def to_two_row(perm):
-        return [perm(i + 1) for i in range(perm.max_value)]
+        return [perm(i + 1) for i in range(perm.max_value())]
 
     @staticmethod
-    def from_two_row(second_row):
-        remaining = [x + 1 for x in range(len(second_row))]
+    def from_two_row(second_row, to_check=None):
+        remaining = [x + 1 for x in range(len(second_row))] if to_check is None else to_check
         cycles = []
         while remaining:
             i = remaining.pop(0)
@@ -41,7 +41,19 @@ class Perm:
 
         self.is_identity = cycles == [[]]
         self.cycles = cycles
-        self.max_value = 1 if self.is_identity else max(x for cycle in cycles for x in cycle)
+        self.__max_value__ = 1 if self.is_identity else None
+
+    def __len__(self):
+        return sum(map(len, self.cycles))
+
+    def max_value(self):
+        if self.__max_value__:
+            return self.__max_value__
+        self.__max_value__ = max(x for cycle in self.cycles for x in cycle)
+        return self.__max_value__
+
+    def sign(self):
+        return ((len(self) - len(self.cycles)) % 2) * -2 + 1
 
     def __str__(self):
         return "(1)" if self.is_identity else "".join("(" + " ".join(map(str, cycle)) + ")" for cycle in self.cycles)
@@ -68,7 +80,7 @@ class Perm:
         if self.is_identity:
             return other
 
-        return Perm.from_two_row([self(other(i + 1)) for i in range(max(self.max_value, other.max_value))])
+        return Perm.from_two_row([self(other(i + 1)) for i in range(max(self.max_value(), other.max_value()))])
 
     def inverse(self):
         def cycle_inverse(cycle):
@@ -133,6 +145,15 @@ class Perm:
 
     def __invert__(self):
         return self.inverse()
+
+    def __pow__(self, power, modulo=None):
+        if power < 0:
+            return (~self) ** (-power)
+        current = Perm()
+        for _ in range(power):
+            current *= self
+        return current
+
 
 class Algebraic:
     def __init__(self, term_map=None):
@@ -211,7 +232,12 @@ class Algebraic:
         return str(self)
 
     def __eq__(self, other):
-        return self is other or (isinstance(other, Algebraic) and other.terms == self.terms)
+        if self is other:
+            return True
+        if not isinstance(other, Algebraic):
+            return False
+
+        return all(not v or other.terms[k] == v for k, v in self.terms.items())
 
     def __hash__(self):
         return hash(self.terms)

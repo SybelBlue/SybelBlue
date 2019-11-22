@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f738909a-4d35-48fe-a7bf-970a065d8622" name="Default" comment="Significant progress all around">
-      <change afterPath="$PROJECT_DIR$/repTheory/Algebraic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repTheory/Perm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repTheory/Tableau.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repTheory/scratch.py" beforeDir="false" afterPath="$PROJECT_DIR$/repTheory/scratch.py" afterDir="false" />
+    <list default="true" id="f738909a-4d35-48fe-a7bf-970a065d8622" name="Default" comment="More restructuring">
+      <change afterPath="$PROJECT_DIR$/repTheory/groups.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repTheory/BasicStructures.py" beforeDir="false" afterPath="$PROJECT_DIR$/repTheory/BasicStructures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repTheory/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/repTheory/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,11 +44,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/repTheory/scratch.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/repTheory/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+            <state relative-caret-position="629">
+              <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/repTheory/groups.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -57,46 +69,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/repTheory/BasicStructures.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repTheory/Tableau.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/repTheory/Perm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/repTheory/Algebraic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="35" selection-start-column="35" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/codecs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="308" selection-start-line="308" selection-end-line="308" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Abstract/GroupST.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="30" selection-start-column="30" selection-end-column="30" />
+              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -139,6 +124,8 @@
       <find>\n\(.*\)</find>
       <find>\n.*but not both.*\n</find>
       <find>soci 190</find>
+      <find>self.max_value</find>
+      <find>.max_value</find>
     </findStrings>
     <replaceStrings>
       <replace>edge</replace>
@@ -165,10 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main/AverageDaylightLoss.py" />
-        <option value="$PROJECT_DIR$/main/testpda.jff" />
-        <option value="$PROJECT_DIR$/main/english.txt" />
-        <option value="$PROJECT_DIR$/main/temp.txt" />
         <option value="$PROJECT_DIR$/main/L_Sys_Interpreter.py" />
         <option value="$PROJECT_DIR$/main/conn-beyond/LSystem.py" />
         <option value="$PROJECT_DIR$/main/conn-beyond/L_Sys_Interpreter.py" />
@@ -212,10 +195,14 @@
         <option value="$PROJECT_DIR$/main/maze_maker.py" />
         <option value="$PROJECT_DIR$/main/Misc.py" />
         <option value="$PROJECT_DIR$/Abstract/RuleMaker.py" />
-        <option value="$PROJECT_DIR$/repTheory/Perm.py" />
         <option value="$PROJECT_DIR$/repTheory/scratch.py" />
-        <option value="$PROJECT_DIR$/repTheory/Tableau.py" />
+        <option value="$PROJECT_DIR$/repTheory/Perm.py" />
         <option value="$PROJECT_DIR$/repTheory/Algebraic.py" />
+        <option value="$PROJECT_DIR$/repTheory/Structures.py" />
+        <option value="$PROJECT_DIR$/repTheory/Tableau.py" />
+        <option value="$PROJECT_DIR$/repTheory/groups.py" />
+        <option value="$PROJECT_DIR$/repTheory/BasicStructures.py" />
+        <option value="$PROJECT_DIR$/repTheory/test.py" />
       </list>
     </option>
   </component>
@@ -279,7 +266,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.test">
-    <configuration name="GroupBuilder" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="BasicStructures" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SybelBlue" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -287,12 +274,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Abstract" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/repTheory" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Abstract/GroupBuilder.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/repTheory/BasicStructures.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -323,28 +310,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Misc" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="SybelBlue" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/Misc.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Tableau" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SybelBlue" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -359,6 +324,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/repTheory/Tableau.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="groups" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SybelBlue" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/repTheory" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/repTheory/groups.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -413,19 +400,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.L_Sys_Interpreter" />
-      <item itemvalue="Python.Misc" />
-      <item itemvalue="Python.GroupBuilder" />
       <item itemvalue="Python.scratch" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.Tableau" />
+      <item itemvalue="Python.groups" />
+      <item itemvalue="Python.BasicStructures" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.BasicStructures" />
+        <item itemvalue="Python.groups" />
         <item itemvalue="Python.Tableau" />
         <item itemvalue="Python.scratch" />
-        <item itemvalue="Python.GroupBuilder" />
-        <item itemvalue="Python.Misc" />
       </list>
     </recent_temporary>
   </component>
@@ -504,7 +491,8 @@
       <workItem from="1567776081257" duration="459000" />
       <workItem from="1569962675987" duration="69000" />
       <workItem from="1569972058996" duration="43000" />
-      <workItem from="1574379821860" duration="18492000" />
+      <workItem from="1574379821860" duration="19883000" />
+      <workItem from="1574454205856" duration="2144000" />
     </task>
     <task id="LOCAL-00001" summary="Basic functioning of Algebraic and Perm">
       <created>1574396237611</created>
@@ -520,11 +508,25 @@
       <option name="project" value="LOCAL" />
       <updated>1574448015079</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Split up scratch file">
+      <created>1574448240455</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574448240455</updated>
+    </task>
+    <task id="LOCAL-00004" summary="More restructuring">
+      <created>1574448461352</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574448461352</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225608000" />
+    <option name="totallyTimeSpent" value="229143000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -539,6 +541,31 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49685535" weight="0.1684435" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3217768" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31310943" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38353196" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32917705" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3286334" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.20822942" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32886723" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
+      <window_info anchor="right" id="Structure" order="5" sideWeight="0.5041876" side_tool="true" weight="0.17270789" />
+      <window_info anchor="right" id="SciView" order="6" sideWeight="0.4958124" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="7" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49685535" visible="true" weight="0.1684435" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -562,31 +589,6 @@
       <window_info anchor="right" id="Structure" order="5" sideWeight="0.5041876" side_tool="true" visible="true" weight="0.17270789" />
       <window_info anchor="right" id="SciView" order="6" sideWeight="0.4958124" weight="0.32995737" />
       <window_info anchor="right" id="Database" order="7" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49685535" visible="true" weight="0.08959711" />
-      <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32286024" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32004982" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.38894907" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32917705" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.3286334" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.20822942" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32886723" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="right" id="R Packages" order="4" />
-      <window_info anchor="right" id="Structure" order="5" sideWeight="0.5041876" side_tool="true" weight="0.4511743" />
-      <window_info anchor="right" id="SciView" order="6" sideWeight="0.4958124" weight="0.32995737" />
-      <window_info anchor="right" id="Database" order="7" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,7 +600,9 @@
     </ignored-roots>
     <MESSAGE value="Basic functioning of Algebraic and Perm" />
     <MESSAGE value="Significant progress all around" />
-    <option name="LAST_COMMIT_MESSAGE" value="Significant progress all around" />
+    <MESSAGE value="Split up scratch file" />
+    <MESSAGE value="More restructuring" />
+    <option name="LAST_COMMIT_MESSAGE" value="More restructuring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -666,17 +670,19 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SybelBlue$GroupBuilder.coverage" NAME="GroupBuilder Coverage Results" MODIFIED="1567776214532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
+    <SUITE FILE_PATH="coverage/SybelBlue$groups.coverage" NAME="groups Coverage Results" MODIFIED="1574449057809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
     <SUITE FILE_PATH="coverage/SybelBlue$HW7Scratch.coverage" NAME="HW7Scratch Coverage Results" MODIFIED="1555548524625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
     <SUITE FILE_PATH="coverage/SybelBlue$Misc.coverage" NAME="Misc Coverage Results" MODIFIED="1560490749867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
-    <SUITE FILE_PATH="coverage/SybelBlue$Tableau.coverage" NAME="Tableau Coverage Results" MODIFIED="1574448407507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
-    <SUITE FILE_PATH="coverage/SybelBlue$test.coverage" NAME="test Coverage Results" MODIFIED="1574448410983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
-    <SUITE FILE_PATH="coverage/SybelBlue$Z_2Poly.coverage" NAME="Z_2Poly Coverage Results" MODIFIED="1555987145760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/SybelBlue$LaTeXFunctions.coverage" NAME="LaTeXFunctions Coverage Results" MODIFIED="1556313705017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
-    <SUITE FILE_PATH="coverage/SybelBlue$Polynomial.coverage" NAME="Polynomial Coverage Results" MODIFIED="1555877972657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/SybelBlue$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1574447976326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
+    <SUITE FILE_PATH="coverage/SybelBlue$HW8Scratch.coverage" NAME="HW8Scratch Coverage Results" MODIFIED="1557002292965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
+    <SUITE FILE_PATH="coverage/SybelBlue$Tableau.coverage" NAME="Tableau Coverage Results" MODIFIED="1574448407507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
+    <SUITE FILE_PATH="coverage/SybelBlue$test.coverage" NAME="test Coverage Results" MODIFIED="1574465250380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
+    <SUITE FILE_PATH="coverage/SybelBlue$BasicStructures.coverage" NAME="BasicStructures Coverage Results" MODIFIED="1574449317990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
+    <SUITE FILE_PATH="coverage/SybelBlue$Z_2Poly.coverage" NAME="Z_2Poly Coverage Results" MODIFIED="1555987145760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/SybelBlue$Polynomial.coverage" NAME="Polynomial Coverage Results" MODIFIED="1555877972657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/SybelBlue$FinalScratch.coverage" NAME="FinalScratch Coverage Results" MODIFIED="1557194598661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
     <SUITE FILE_PATH="coverage/SybelBlue$maze_maker.coverage" NAME="maze_maker Coverage Results" MODIFIED="1558846647577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
-    <SUITE FILE_PATH="coverage/SybelBlue$HW8Scratch.coverage" NAME="HW8Scratch Coverage Results" MODIFIED="1557002292965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -752,8 +758,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Abstract/test.py" />
-    <entry file="file://$PROJECT_DIR$/Abstract/U24test.py" />
     <entry file="file://$PROJECT_DIR$/Abstract/ProjectScratch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1046,34 +1050,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repTheory/scratch.py">
+    <entry file="file://$PROJECT_DIR$/repTheory/Perm.py" />
+    <entry file="file://$PROJECT_DIR$/repTheory/Algebraic.py" />
+    <entry file="file://$PROJECT_DIR$/repTheory/Tableau.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+        <state relative-caret-position="119">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repTheory/groups.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repTheory/Perm.py">
+    <entry file="file://$PROJECT_DIR$/repTheory/BasicStructures.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="115" column="26" selection-start-line="115" selection-start-column="26" selection-end-line="115" selection-end-column="26" />
+        <state relative-caret-position="221">
+          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repTheory/Tableau.py">
+    <entry file="file://$PROJECT_DIR$/repTheory/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repTheory/Algebraic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        <state relative-caret-position="629">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
