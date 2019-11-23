@@ -4,6 +4,8 @@ from repTheory.BasicStructures import Perm, Algebraic
 from repTheory.Tableau import Tableau
 from repTheory.groups import generateS
 
+from numpy import array
+
 assert Perm([1, 2]) == Perm([1, 2])  # basic equality test
 assert Perm([5, 4], [], [2, 3, 1]).scrub() == Perm([1, 2, 3], [4, 5])  # test scrubbing into standard form
 assert Perm([1, 2, 3], [4, 5]) == Perm([1, 2, 3], [4, 5]).scrub()  # test scrubbing does nothing to standard form
@@ -67,16 +69,24 @@ print(test_tableau.transpose().fancy())
 print("-------")
 test_tableau = Tableau([2, 1])
 print(test_tableau.fancy())
-print(test_tableau.symmetrizer())
-test_Y = Tableau.Y(Tableau([2, 1], perm=Perm([2, 3])), test_tableau)
+print("symmet:", test_tableau.symmetrizer())
+test_pair = Tableau([2, 1], perm=Perm([2, 3])), test_tableau
+print(*test_pair)
+test_Y = Tableau.Y(*test_pair)
 print(test_Y)
 ordering = sorted(generateS(3), key=lambda perm: perm.key())
 print(ordering)
+print(test_tableau.symmetrizer().to_coeffs(ordering))
 print(test_Y.to_coeffs(ordering))
 
 print("---")
 s_3_pairs = Tableau.combinations(Tableau([3]), Tableau([2, 1]), Tableau([2, 1], perm=Perm([2, 3])), Tableau([1, 1, 1]))
 print(s_3_pairs)
-symmetrizers = [*map(lambda p: Tableau.Y(*p), s_3_pairs)]
-print(*symmetrizers, sep='\n')
-print(*map(lambda s: s.to_coeffs(ordering), symmetrizers), sep='\n')
+symmetrizers = list()
+for i, pair in enumerate(s_3_pairs):
+    y = Tableau.Y(*pair)
+    symmetrizers.append(y)
+    print(i, pair, y)
+
+mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
+print(mat)

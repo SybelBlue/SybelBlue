@@ -113,7 +113,7 @@ class Perm:
         if isinstance(other, Algebraic):
             x = Algebraic()
             for k, v in other.terms.items():
-                x += v * self.inv_conj(k)
+                x.terms[self.inv_conj(k)] += v
             return x
         if isinstance(other, Perm):
             if other.is_identity:
@@ -152,6 +152,12 @@ class Perm:
     def __eq__(self, other):
         if self is other:
             return True
+
+        if not isinstance(other, Perm):
+            return False
+
+        if self.is_identity or other.is_identity:
+            return self.is_identity and other.is_identity
 
         def test_cycles(i):
             return all(self.cycles[i][j] == other.cycles[i][j] for j in range(len(self.cycles[i])))

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f738909a-4d35-48fe-a7bf-970a065d8622" name="Default" comment="Lots of progress">
+    <list default="true" id="f738909a-4d35-48fe-a7bf-970a065d8622" name="Default" comment="Finished some testing, still bugs though">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repTheory/BasicStructures.py" beforeDir="false" afterPath="$PROJECT_DIR$/repTheory/BasicStructures.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repTheory/Tableau.py" beforeDir="false" afterPath="$PROJECT_DIR$/repTheory/Tableau.py" afterDir="false" />
@@ -42,6 +42,20 @@
     <SUITE FILE_PATH="coverage/SybelBlue$PillowTest.coverage" NAME="PillowTest Coverage Results" MODIFIED="1540695617148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/SybelBlue$U24.coverage" NAME="U24 Coverage Results" MODIFIED="1551657325922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -51,11 +65,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="670" />
-    <option name="width" value="693" />
-    <option name="height" value="738" />
   </component>
   <component name="ProjectId" id="1TzcmChcWf4vEIl7vUf7r12BtqH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -318,7 +327,7 @@
       <workItem from="1574379821860" duration="19883000" />
       <workItem from="1574454205856" duration="3183000" />
       <workItem from="1574466541613" duration="3290000" />
-      <workItem from="1574475349319" duration="13867000" />
+      <workItem from="1574475349319" duration="18955000" />
     </task>
     <task id="LOCAL-00001" summary="Basic functioning of Algebraic and Perm">
       <created>1574396237611</created>
@@ -369,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574482125190</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Finished some testing, still bugs though">
+      <created>1574489238357</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1574489238357</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -408,7 +424,8 @@
     <MESSAGE value="Now group generator works, added better tests, some memoizing with Perm" />
     <MESSAGE value="Finished Tableau.Y" />
     <MESSAGE value="Lots of progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lots of progress" />
+    <MESSAGE value="Finished some testing, still bugs though" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished some testing, still bugs though" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -458,16 +475,6 @@
           <line>84</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/repTheory/BasicStructures.py</url>
-          <line>300</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/repTheory/BasicStructures.py</url>
-          <line>261</line>
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -485,7 +492,7 @@
     <SUITE FILE_PATH="coverage/SybelBlue$Misc.coverage" NAME="Misc Coverage Results" MODIFIED="1560490749867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/SybelBlue$FinalScratch.coverage" NAME="FinalScratch Coverage Results" MODIFIED="1557194598661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
     <SUITE FILE_PATH="coverage/SybelBlue$LaTeXFunctions.coverage" NAME="LaTeXFunctions Coverage Results" MODIFIED="1556313705017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
-    <SUITE FILE_PATH="coverage/SybelBlue$test.coverage" NAME="test Coverage Results" MODIFIED="1574489199812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
+    <SUITE FILE_PATH="coverage/SybelBlue$test.coverage" NAME="test Coverage Results" MODIFIED="1574527347870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
     <SUITE FILE_PATH="coverage/SybelBlue$Tableau.coverage" NAME="Tableau Coverage Results" MODIFIED="1574468869934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
     <SUITE FILE_PATH="coverage/SybelBlue$Z_2Poly.coverage" NAME="Z_2Poly Coverage Results" MODIFIED="1555987145760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/SybelBlue$maze_maker.coverage" NAME="maze_maker Coverage Results" MODIFIED="1558846647577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
