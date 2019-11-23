@@ -170,10 +170,23 @@ class Perm:
     def __sub__(self, other):
         return Algebraic({self: 1, other: -1})
 
+    def key(self):
+        k = 10 ** len(self)
+        for cycle in self.cycles:
+            if len(cycle):
+                k += cycle[0] - 1
+            for i in range(len(cycle) - 1):
+                k += (len(cycle) - i) * (cycle[i + 1] - cycle[i]) ** 4
+                k += (len(cycle) - i) * (cycle[i] - i) ** 4
+            k += sum(cycle) ** 3
+            k -= len(cycle)
+
+        return k
+
 
 class Algebraic:
     def __init__(self, term_map=None):
-        self.terms = defaultdict(lambda: 0)
+        self.terms = defaultdict(int)
         if term_map is None:
             return
         for k, v in term_map.items():
@@ -196,7 +209,7 @@ class Algebraic:
         return self
 
     def __add__(self, other):
-        terms = defaultdict(lambda: 0)
+        terms = defaultdict(int)
         for k, v in self.terms.items():
             terms[k] = v
 
@@ -208,7 +221,7 @@ class Algebraic:
         return Algebraic(terms)
 
     def __sub__(self, other):
-        terms = defaultdict(lambda: 0)
+        terms = defaultdict(int)
         for k, v in self.terms.items():
             terms[k] = v
 

@@ -37,21 +37,28 @@ assert len(set(generateS(3))) is 6
 assert len(set(generateS(4))) is 24
 assert len(set(generateS(5))) is 120
 
+# print(*sorted(generateS(4),  key=lambda perm: perm.key()))
+# print(*map(lambda p: p.key(), sorted(generateS(4),  key=lambda perm: perm.key())))
+# print(len({*map(lambda p: p.key(), sorted(generateS(4),  key=lambda perm: perm.key()))}))
+
 test_tableau = Tableau([4, 2, 2, 1], perm=Perm())
 print("tableau")
-print(repr(test_tableau))
+print(test_tableau.fancy())
+print("repr:", repr(test_tableau))
 print("row generators:", *test_tableau.row_generators())
 print("column generators:", *test_tableau.col_generators())
 print(reduce(lambda p, q: p + q, test_tableau.col_generators()))
 print("transpose")
-print(repr(test_tableau.transpose()))
+print(test_tableau.transpose().fancy())
 
 print("-------")
 test_tableau = Tableau([2, 1])
-print(repr(test_tableau))
+print(test_tableau.fancy())
 print(test_tableau.symmetrizer())
 test_Y = Tableau.Y(Tableau([2, 1], perm=Perm([2, 3])), test_tableau)
 print(test_Y)
-ordering = sorted(generateS(3), key=lambda perm: len(perm))
+ordering = sorted(generateS(3), key=lambda perm: perm.key())
 print(ordering)
 print(test_Y.to_coeffs(ordering))
+
+print(Tableau.combinations(Tableau([3]), Tableau([2, 1]), Tableau([2, 1], perm=Perm([2, 3])), Tableau([1, 1, 1])))

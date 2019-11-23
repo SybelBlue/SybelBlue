@@ -1,3 +1,7 @@
+from collections import defaultdict
+from functools import reduce
+from itertools import product
+
 from repTheory.BasicStructures import Perm, Algebraic
 from repTheory.groups import make_group
 
@@ -19,6 +23,21 @@ class Tableau:
         if not len(out):
             out.append(Perm())
         return out
+
+    @staticmethod
+    def combinations(*tabs):
+        """ returns all pairings of provided tabs that can be entered as params in Tableau.Y """
+        def add_and_ret(d, k, v):
+            d[k].append(v)
+            return d
+
+        out = []
+        groupings = reduce(lambda d, tab: add_and_ret(d, str(tab.type), tab), tabs, defaultdict(list)).values()
+        for grouping in groupings:
+            for pair in product(grouping, grouping):
+                out.append(pair)
+        return out
+
 
     def __init__(self, type, perm=None):
         self.type = type
@@ -52,7 +71,7 @@ class Tableau:
             for j in range(len(self.type)):
                 if len(rows[j]) <= i:
                     break
-                col.append(self.perm(rows[j][i]))
+                col.append(rows[j][i])
             cols.append(col)
 
         return cols
@@ -77,5 +96,8 @@ class Tableau:
         return Tableau(type)
 
     def __repr__(self):
+        return " | ".join(" ".join(map(str, row)) for row in self.rows())
+
+    def fancy(self):
         space = " " * len(str(self.size))
         return "\n".join(space.join(map(str, row)) for row in self.rows())
