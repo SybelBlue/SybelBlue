@@ -1,7 +1,25 @@
-from repTheory.BasicStructures import Perm
+from repTheory.BasicStructures import Perm, Algebraic
+from repTheory.groups import make_group
 
 
 class Tableau:
+    @staticmethod
+    def Y(r, t):
+        if r.type != t.type:
+            raise TypeError("Can not compute Y for different cycle types")
+        sig = (r.perm * ~t.perm)
+        return ~sig * t.symmetrizer() * sig
+
+    @staticmethod
+    def all_two_cycles_of(lists):
+        out = list()
+        for row in lists:
+            for i in range(len(row) - 1):
+                out.append(Perm([row[i], row[i + 1]]))
+        if not len(out):
+            out.append(Perm())
+        return out
+
     def __init__(self, type, perm=None):
         self.type = type
         self.size = sum(type)
@@ -22,7 +40,7 @@ class Tableau:
         return out
 
     def row_generators(self):
-        return list({*map(Perm, self.rows())})
+        return Tableau.all_two_cycles_of(self.rows())
 
     def columns(self):
         cols = []
@@ -39,8 +57,24 @@ class Tableau:
 
         return cols
 
-    def col_genenerators(self):
-        return list({*map(Perm, self.columns())})
+    def col_generators(self):
+        return Tableau.all_two_cycles_of(self.columns())
+
+    def symmetrizer(self):
+        y = Algebraic()
+        for gamma in make_group(self.col_generators()):
+            for rho in make_group(self.row_generators()):
+                y.terms[gamma * rho] += gamma.sign()
+        return y
+
+    def transpose(self):
+        """ structural transpose only!!! does not preserve labeling """
+        type = []
+        old_type = self.type.copy()
+        while old_type:
+            type.append(len(old_type))
+            old_type = [*filter(bool, map(lambda x: x - 1, old_type))]
+        return Tableau(type)
 
     def __repr__(self):
         space = " " * len(str(self.size))

@@ -2,7 +2,7 @@ from collections import defaultdict
 
 
 class Perm:
-    """ Assuemd to be disjoint when init """
+    """ Assumed to be disjoint on init """
 
     @staticmethod
     def to_two_row(perm):
@@ -42,6 +42,7 @@ class Perm:
         self.is_identity = cycles == [[]]
         self.cycles = cycles
         self.__max_value__ = 1 if self.is_identity else None
+        self.__scrubbed__ = False
 
     def __len__(self):
         return sum(map(len, self.cycles))
@@ -53,7 +54,8 @@ class Perm:
         return self.__max_value__
 
     def sign(self):
-        return ((len(self) - len(self.cycles)) % 2) * -2 + 1
+        # self.scrub()
+        return 1 if self.is_identity else ((len(self) - len(self.cycles)) % 2) * -2 + 1
 
     def __str__(self):
         return "(1)" if self.is_identity else "".join("(" + " ".join(map(str, cycle)) + ")" for cycle in self.cycles)
@@ -83,12 +85,18 @@ class Perm:
         return Perm.from_two_row([self(other(i + 1)) for i in range(max(self.max_value(), other.max_value()))])
 
     def inverse(self):
+        if self.is_identity:
+            return Perm()
         def cycle_inverse(cycle):
             return [cycle[0], *(cycle[1:])[::-1]]
 
         return Perm.from_lists(map(cycle_inverse, self.cycles))
 
     def scrub(self):
+        if self.__scrubbed__:
+            return self
+
+        self.__scrubbed__ = True
         cycles = []
         for cycle in self.cycles:
             if len(cycle) <= 1:
@@ -126,7 +134,7 @@ class Perm:
     def __rmul__(self, other):
         if isinstance(other, int) or isinstance(other, float):
             return Algebraic({self: other})
-        raise NotImplementedError("Can't rmul " + other + " and Algebraic")
+        raise NotImplementedError("Can't rmul " + str(other) + " and Algebraic")
 
     def __truediv__(self, other):
         return ~self * other
@@ -154,12 +162,22 @@ class Perm:
             current *= self
         return current
 
+    def __add__(self, other):
+        if isinstance(other, int) or isinstance(other, float):
+            return Algebraic({self: 1, Perm(): other})
+        return Algebraic({self: 1, other: 1})
+
+    def __sub__(self, other):
+        return Algebraic({self: 1, other: -1})
+
 
 class Algebraic:
     def __init__(self, term_map=None):
+        self.terms = defaultdict(lambda: 0)
         if term_map is None:
-            term_map = defaultdict(lambda: 0)
-        self.terms = term_map
+            return
+        for k, v in term_map.items():
+            self.terms[k] = v
 
     def __iadd__(self, other):
         if isinstance(other, Perm):
@@ -178,7 +196,10 @@ class Algebraic:
         return self
 
     def __add__(self, other):
-        terms = self.terms.copy()
+        terms = defaultdict(lambda: 0)
+        for k, v in self.terms.items():
+            terms[k] = v
+
         if isinstance(other, Perm):
             terms[other] += 1
         elif isinstance(other, Algebraic):
@@ -187,7 +208,10 @@ class Algebraic:
         return Algebraic(terms)
 
     def __sub__(self, other):
-        terms = self.terms.copy()
+        terms = defaultdict(lambda: 0)
+        for k, v in self.terms.items():
+            terms[k] = v
+
         if isinstance(other, Perm):
             terms[other] -= 1
         elif isinstance(other, Algebraic):
@@ -198,7 +222,12 @@ class Algebraic:
     def scale(self, other):
         return Algebraic({k: other * v for k, v in self.terms.items()})
 
+    def normalized(self):
+        return self.scale(1 / sum(map(abs, self.terms.values())))
+
     def __mul__(self, other):
+        if isinstance(other, Perm):
+            return Algebraic({k(other): v for k, v in self.terms.items()})
         return other.__rmult__(self)
 
     def __rmult__(self, other):
@@ -211,7 +240,10 @@ class Algebraic:
             return test
         if isinstance(other, Perm):
             return Algebraic({other(k): v for k, v in self.terms.items()})
-        raise NotImplementedError()
+        raise TypeError("Perm.__rmult__ is not defined for " + str(other))
+
+    def __getitem__(self, item):
+        return self.terms[item]
 
     def __str__(self):
         def str_of_term(coeff, perm):
@@ -240,4 +272,7 @@ class Algebraic:
         return all(not v or other.terms[k] == v for k, v in self.terms.items())
 
     def __hash__(self):
-        return hash(self.terms)
+        return hash(str(self))
+
+    def to_coeffs(self, ordering):
+        return [self[perm] for perm in ordering]
