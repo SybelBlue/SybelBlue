@@ -34,11 +34,10 @@ class Perm:
 
     def __init__(self, *cycles):
         cycles = list(cycles)
-        if cycles is None or not len(cycles) or len(cycles) == 1 == len(cycles[0]):
+        if cycles is None or not len(cycles) or len(cycles) == 1 >= len(cycles[0]):
             cycles = [[]]
         elif isinstance(cycles[0], int) or (isinstance(cycles, list) and not len(cycles)):
             cycles = [cycles]
-
         self.is_identity = cycles == [[]]
         self.cycles = cycles
         self.__max_value__ = 1 if self.is_identity else None
@@ -104,12 +103,23 @@ class Perm:
 
             index = cycle.index(min(cycle))
             cycles.append(cycle[index:] + cycle[:index])
-
+        if not len(cycles):
+            return [[]]
         self.cycles = sorted(cycles, key=lambda cycle: cycle[0])
         return self
 
-    def __neg__(self):
-        print(self)
+    def inv_conj(self, other):
+        """ should equal ~self * other * self, but this is faster """
+        if isinstance(other, Algebraic):
+            x = Algebraic()
+            for k, v in other.terms.items():
+                x += v * self.inv_conj(k)
+            return x
+        if isinstance(other, Perm):
+            if other.is_identity:
+                return Perm()
+            return Perm.from_lists([*map(self, cycle)] for cycle in other.cycles).scrub()
+        return self * other * ~self
 
     def __call__(self, *args, **kwargs):
         """ so that permutations can be applied like functions to ints or other perms """
@@ -239,6 +249,8 @@ class Algebraic:
         return self.scale(1 / sum(map(abs, self.terms.values())))
 
     def __mul__(self, other):
+        if isinstance(other, int) or isinstance(other, float):
+            return self.scale(other)
         if isinstance(other, Perm):
             return Algebraic({k(other): v for k, v in self.terms.items()})
         return other.__rmult__(self)
@@ -247,10 +259,12 @@ class Algebraic:
         if isinstance(other, int) or isinstance(other, float):
             return self.scale(other)
         if isinstance(other, Algebraic):
-            test = Algebraic()
-            for k, v in self.terms.items():
-                test += k * self.scale(v)
-            return test
+            alg = Algebraic()
+            for k, v in other.terms.items():
+                if v is 0:
+                    continue
+                alg += k * self.scale(v)
+            return alg
         if isinstance(other, Perm):
             return Algebraic({other(k): v for k, v in self.terms.items()})
         raise TypeError("Perm.__rmult__ is not defined for " + str(other))
@@ -281,8 +295,11 @@ class Algebraic:
             return True
         if not isinstance(other, Algebraic):
             return False
-
-        return all(not v or other.terms[k] == v for k, v in self.terms.items())
+        keys = {*self.terms.keys(), *other.terms.keys()}
+        for k in keys:
+            if self[k] != other[k]:
+                return False
+        return True
 
     def __hash__(self):
         return hash(str(self))

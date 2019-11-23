@@ -6,6 +6,7 @@ from repTheory.groups import generateS
 
 assert Perm([1, 2]) == Perm([1, 2])  # basic equality test
 assert Perm([5, 4], [], [2, 3, 1]).scrub() == Perm([1, 2, 3], [4, 5])  # test scrubbing into standard form
+assert Perm([1, 2, 3], [4, 5]) == Perm([1, 2, 3], [4, 5]).scrub()  # test scrubbing does nothing to standard form
 assert [*map(Perm([1, 2, 3], [4, 7]), [2, 3, 4, 9])] == [3, 1, 7, 9]  # can be used as function, int application works
 assert str(Perm()) == "(1)"  # tests that the identity and str(identity) works
 assert str(Perm.from_two_row([4, 1, 3, 2, 6, 5])) == "(1 4 2)(5 6)"  # conversion from 2xN mat form. (second row only)
@@ -16,23 +17,35 @@ assert ~test_cycle * test_cycle == Perm()  # inverse test
 assert test_cycle / test_cycle == Perm()  # division test
 assert test_cycle.sign() is -1  # sign test
 assert len(set(test_cycle ** i for i in range(6))) is 6  # pow test
+assert test_cycle.inv_conj(Perm([1, 4, 2, 3])) == test_cycle * Perm([1, 4, 2, 3]) * ~test_cycle
 
 test_elem = Algebraic({Perm([1, 2, 3]): 3, Perm([1, 3, 2]): 1, Perm(): -1, Perm([1, 2]): 0})
 assert test_elem == test_elem  # basic equality test
 assert test_elem[Perm([1, 2, 3])] is 3  # Perm hash works, Algebraic getitem works
 
-print(test_elem - 2 * Perm([1, 2, 3]))
-print(Algebraic({Perm([1, 2, 3]): 1, Perm(): 1}))
-test_elem -= Perm([1, 2, 3])
+# Alg-Perm subtraction, Perm mutliplication and Algebraic equality
+assert test_elem - 2 * Perm([1, 2, 3]) == Algebraic({Perm([1, 2, 3]): 1, Perm([1, 3, 2]): 1, Perm(): -1})
+test_elem += Perm([1, 2, 3])
+test_elem -= 2 * Perm([1, 2, 3])
+# Alg subtract-equals, plus-equals, equality, Perm __rmult__
+assert test_elem == Algebraic({Perm([1, 2, 3]): 2, Perm([1, 3, 2]): 1, Perm(): -1})
 
-print(test_elem.scale(2))
+# Alg scaling, __mul__
+assert test_elem * 2 == Algebraic({Perm([1, 2, 3]): 4, Perm([1, 3, 2]): 2, Perm(): -2})
+# Alg 0
+assert test_elem - test_elem == Algebraic()
 
-print(test_elem - test_elem)
-print(test_elem * Perm([1, 2]))
-print(Perm([1, 2]) * test_elem)
-print(~Perm([1, 2]) * test_elem * Perm([1, 2]))
-print(test_elem * test_elem)
+# Alg __rumlt__ and key rotation
+assert test_elem * Perm([1, 2]) == Algebraic({Perm([1, 3]): 2, Perm([2, 3]): 1, Perm([1, 2]): -1})
+# Alg __mul__ and key rotation
+assert Perm([1, 2]) * test_elem == Algebraic({Perm([2, 3]): 2, Perm([1, 3]): 1, Perm([1, 2]): -1})
+assert Perm([1, 2]) * test_elem * ~Perm([1, 2]) == Perm([1, 2]).inv_conj(test_elem)
 
+# Alg x Alg
+assert test_elem * (2 * Perm([1, 2])) == Algebraic({Perm([1, 3]): 4, Perm([2, 3]): 2, Perm([1, 2]): -2})
+assert test_elem * test_elem == Algebraic({Perm([1, 3, 2]): 2, Perm(): 5, Perm([1, 2, 3]): -3})
+
+# generator tests
 assert len(set(generateS(3))) is 6
 assert len(set(generateS(4))) is 24
 assert len(set(generateS(5))) is 120
@@ -61,4 +74,9 @@ ordering = sorted(generateS(3), key=lambda perm: perm.key())
 print(ordering)
 print(test_Y.to_coeffs(ordering))
 
-print(Tableau.combinations(Tableau([3]), Tableau([2, 1]), Tableau([2, 1], perm=Perm([2, 3])), Tableau([1, 1, 1])))
+print("---")
+s_3_pairs = Tableau.combinations(Tableau([3]), Tableau([2, 1]), Tableau([2, 1], perm=Perm([2, 3])), Tableau([1, 1, 1]))
+print(s_3_pairs)
+symmetrizers = [*map(lambda p: Tableau.Y(*p), s_3_pairs)]
+print(*symmetrizers, sep='\n')
+print(*map(lambda s: s.to_coeffs(ordering), symmetrizers), sep='\n')

@@ -12,7 +12,9 @@ class Tableau:
         if r.type != t.type:
             raise TypeError("Can not compute Y for different cycle types")
         sig = (r.perm * ~t.perm)
-        return ~sig * t.symmetrizer() * sig
+        symmet = t.symmetrizer()
+        conj_symmet = sig.inv_conj(symmet)
+        return conj_symmet
 
     @staticmethod
     def all_two_cycles_of(lists):
