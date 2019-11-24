@@ -6,20 +6,29 @@ from repTheory.BasicStructures import Perm, Algebraic
 from repTheory.groups import make_group
 
 
+class SymmetrizerDict(dict):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def __contains__(self, item):
+        if isinstance(item, Tableau):
+            return str(item.type) in self.keys()
+        return item in self.keys()
+
+
 class Tableau:
-    symmetrizer_map = dict()
+    symmetrizer_map = SymmetrizerDict()
 
     @staticmethod
     def Y(r, t):
         if r.type != t.type:
             raise TypeError("Can not compute Y for different cycle types")
-        if str(t.type) in Tableau.symmetrizer_map:
-            sig = (r.perm * ~t.perm)
-            # print("optimized!")
-            return sig.inv_conj(Tableau.symmetrizer_map[str(t.type)])
+        # if t in Tableau.symmetrizer_map:
+        #     sig = (r.perm * ~t.perm)
+        #     # print("optimized!")
+        #     return sig.inv_conj(Tableau.symmetrizer_map[str(t.type)])
 
-        symmet = t.symmetrizer()
-        return r.perm * symmet
+        return r.perm * t.symmetrizer()
 
     @staticmethod
     def all_two_cycles_of(lists):
@@ -32,8 +41,13 @@ class Tableau:
         return out
 
     @staticmethod
+    def combinations_of_order(n):
+        return Tableau.combinations(*Tableau.tableau_of_order(n))
+
+    @staticmethod
     def combinations(*tabs):
         """ returns all pairings of provided tabs that can be entered as params in Tableau.Y """
+
         def add_and_ret(d, k, v):
             d[k].append(v)
             return d
@@ -43,6 +57,33 @@ class Tableau:
         for grouping in groupings:
             for pair in product(grouping, grouping):
                 out.append(pair)
+        return out
+
+    @staticmethod
+    def from_lists(rows):
+        return Tableau([*map(len, rows)], perm=Perm.from_two_row([x for row in rows for x in row]))
+
+    @staticmethod
+    def tableau_of_order(n):
+        return [*map(Tableau.from_lists, Tableau.raw_tableau_of_order(n))]
+
+    @staticmethod
+    def raw_tableau_of_order(n):
+        if n <= 0:
+            return []
+        if n is 1:
+            return [[[1]]]
+        prev = Tableau.raw_tableau_of_order(n - 1)
+        out = []
+        for raw_tab in prev:
+            for i in range(len(raw_tab)):
+                if i and len(raw_tab[i - 1]) == len(raw_tab[i]):
+                    continue
+                new_tab = [inner.copy() for inner in raw_tab]
+                new_tab[i].append(n)
+                out.append(new_tab)
+
+            out.append([*raw_tab, [n]])
         return out
 
 
@@ -102,13 +143,21 @@ class Tableau:
         return self.perm * self.type_symmetrizer()
 
     def transpose(self):
-        """ structural transpose only!!! does not preserve labeling """
         type = []
         old_type = self.type.copy()
         while old_type:
             type.append(len(old_type))
             old_type = [*filter(bool, map(lambda x: x - 1, old_type))]
-        return Tableau(type)
+        return Tableau(type, perm=~self.perm)
+
+    def is_standard(self):
+        def ascending_list(list):
+            if not len(list):
+                return True
+            return all(list[i] < list[i + 1] for i in range(len(list) - 1))
+
+        return all(map(ascending_list, self.rows())) and all(map(ascending_list, self.columns()))
+
 
     def __repr__(self):
         return "Perm({0}{1})".format(self.perm, self.type)
@@ -119,3 +168,6 @@ class Tableau:
 
     def __hash__(self):
         return hash(str(self))
+
+    def __eq__(self, other):
+        return isinstance(other, Tableau) and other.type == self.type and other.perm == self.perm

@@ -1,4 +1,5 @@
 from collections import defaultdict
+from math import sqrt
 
 
 class Perm:
@@ -9,8 +10,8 @@ class Perm:
         return [perm(i + 1) for i in range(perm.max_value())]
 
     @staticmethod
-    def from_two_row(second_row, to_check=None):
-        remaining = [x + 1 for x in range(len(second_row))] if to_check is None else to_check
+    def from_two_row(second_row):
+        remaining = [x + 1 for x in range(len(second_row))]
         cycles = []
         while remaining:
             i = remaining.pop(0)
@@ -252,7 +253,7 @@ class Algebraic:
         return Algebraic({k: other * v for k, v in self.terms.items()})
 
     def normalized(self):
-        return self.scale(1 / sum(map(abs, self.terms.values())))
+        return self.scale(1 / sqrt(sum(map(lambda n: n * n, self.terms.values()))))
 
     def __mul__(self, other):
         if isinstance(other, int) or isinstance(other, float):

@@ -33,24 +33,28 @@ test_elem -= 2 * Perm([1, 2, 3])
 assert test_elem == Algebraic({Perm([1, 2, 3]): 2, Perm([1, 3, 2]): 1, Perm(): -1})
 
 # Alg scaling, __mul__
-assert test_elem * 2 == Algebraic({Perm([1, 2, 3]): 4, Perm([1, 3, 2]): 2, Perm(): -2})
+assert test_elem * 2 == 4 * Perm([1, 2, 3]) + 2 * Perm([1, 3, 2]) - 2 * Perm()
 # Alg 0
 assert test_elem - test_elem == Algebraic()
 
 # Alg __rumlt__ and key rotation
-assert test_elem * Perm([1, 2]) == Algebraic({Perm([1, 3]): 2, Perm([2, 3]): 1, Perm([1, 2]): -1})
+assert test_elem * Perm([1, 2]) == 2 * Perm([1, 3]) + Perm([2, 3]) - Perm([1, 2])
 # Alg __mul__ and key rotation
-assert Perm([1, 2]) * test_elem == Algebraic({Perm([2, 3]): 2, Perm([1, 3]): 1, Perm([1, 2]): -1})
+assert Perm([1, 2]) * test_elem == 2 * Perm([2, 3]) + Perm([1, 3]) - Perm([1, 2])
 assert Perm([1, 2]) * test_elem * ~Perm([1, 2]) == Perm([1, 2]).inv_conj(test_elem)
 
 # Alg x Alg
-assert test_elem * (2 * Perm([1, 2])) == Algebraic({Perm([1, 3]): 4, Perm([2, 3]): 2, Perm([1, 2]): -2})
-assert test_elem * test_elem == Algebraic({Perm([1, 3, 2]): 2, Perm(): 5, Perm([1, 2, 3]): -3})
+assert test_elem * (2 * Perm([1, 2])) == 4 * Perm([1, 3]) + 2 * Perm([2, 3]) - 2 * Perm([1, 2])
+assert test_elem * test_elem == 2 * Perm([1, 3, 2]) - 3 * Perm([1, 2, 3]) + 5 * Perm()
 
 # generator tests
 assert len(set(generateS(3))) is 6
 assert len(set(generateS(4))) is 24
 assert len(set(generateS(5))) is 120
+
+assert Tableau([2, 1]) == Tableau.from_lists([[1, 2], [3]])
+assert Tableau([2, 1], perm=Perm([2, 3])) == Tableau.from_lists([[1, 3], [2]])
+assert all(map(lambda t: t.is_standard(), Tableau.tableau_of_order(5)))
 
 # print(*sorted(generateS(4),  key=lambda perm: perm.key()))
 # print(*map(lambda p: p.key(), sorted(generateS(4),  key=lambda perm: perm.key())))
@@ -74,14 +78,16 @@ test_pair = Tableau([2, 1], perm=Perm([2, 3])), test_tableau
 print(*test_pair)
 test_Y = Tableau.Y(*test_pair)
 print(test_Y)
-ordering = sorted(generateS(3), key=lambda perm: perm.key())
+# ordering = sorted(generateS(3), key=lambda perm: perm.key())
+ordering = [Perm(), Perm([1, 2]), Perm([1, 3]), Perm([2, 3]), Perm([1, 3, 2]), Perm([1, 2, 3])]
 print(ordering)
 print(test_tableau.symmetrizer().to_coeffs(ordering))
 print(test_Y.to_coeffs(ordering))
 
 print("---")
-s_3_pairs = Tableau.combinations(Tableau([3]), Tableau([2, 1]), Tableau([2, 1], perm=Perm([2, 3])), Tableau([1, 1, 1]))
-print(s_3_pairs)
+s_3_pairs = Tableau.combinations_of_order(3)
+s_3_pairs[3], s_3_pairs[4] = s_3_pairs[4], s_3_pairs[3]
+print(*map(lambda p: (str(p[0]), str(p[1])), s_3_pairs))
 symmetrizers = list()
 for i, pair in enumerate(s_3_pairs):
     y = Tableau.Y(*pair)
@@ -90,3 +96,30 @@ for i, pair in enumerate(s_3_pairs):
 
 mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
 print(mat)
+
+# print()
+# print()
+# input("-- Continue to S4? ---")
+# print("---")
+# ordering = sorted(generateS(4), key=lambda perm: perm.key())
+# s_4_pairs = Tableau.combinations(
+#     Tableau([4]),
+#     Tableau([3, 1]),
+#     Tableau([3, 1], perm=Perm([3, 4])),
+#     Tableau([3, 1], perm=Perm([2, 3, 4])),
+#     Tableau([2, 2]),
+#     Tableau([2, 2], perm=Perm([2, 3])),
+#     Tableau([2, 1, 1]),
+#     Tableau([2, 1, 1], perm=Perm([3, 4])),
+#     Tableau([2, 1, 1], perm=Perm([2, 4, 3])),
+#     Tableau([1, 1, 1, 1])
+# )
+# symmetrizers = list()
+# for i, pair in enumerate(s_4_pairs):
+#     y = Tableau.Y(*pair)
+#     symmetrizers.append(y)
+#     print(i, pair, y)
+#
+#
+# mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
+# print(mat)
