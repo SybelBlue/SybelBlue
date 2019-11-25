@@ -1,7 +1,7 @@
 from functools import reduce
 
 from repTheory.BasicStructures import Perm, Algebraic
-from repTheory.Tableau import Tableau
+from repTheory.Tableau import Tableau, symmetrizers_of_order
 from repTheory.groups import generateS
 
 from numpy import array
@@ -97,29 +97,17 @@ for i, pair in enumerate(s_3_pairs):
 mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
 print(mat)
 
-# print()
-# print()
-# input("-- Continue to S4? ---")
-# print("---")
-# ordering = sorted(generateS(4), key=lambda perm: perm.key())
-# s_4_pairs = Tableau.combinations(
-#     Tableau([4]),
-#     Tableau([3, 1]),
-#     Tableau([3, 1], perm=Perm([3, 4])),
-#     Tableau([3, 1], perm=Perm([2, 3, 4])),
-#     Tableau([2, 2]),
-#     Tableau([2, 2], perm=Perm([2, 3])),
-#     Tableau([2, 1, 1]),
-#     Tableau([2, 1, 1], perm=Perm([3, 4])),
-#     Tableau([2, 1, 1], perm=Perm([2, 4, 3])),
-#     Tableau([1, 1, 1, 1])
-# )
+print()
+print()
+print("---")
+ordering = sorted(generateS(4), key=lambda perm: perm.key())
+# s_4_pairs = Tableau.combinations_of_order(4)
 # symmetrizers = list()
 # for i, pair in enumerate(s_4_pairs):
 #     y = Tableau.Y(*pair)
 #     symmetrizers.append(y)
 #     print(i, pair, y)
-#
-#
-# mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
-# print(mat)
+symmetrizers = symmetrizers_of_order(4)
+
+mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
+print(mat)

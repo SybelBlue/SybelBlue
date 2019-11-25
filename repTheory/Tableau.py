@@ -47,7 +47,6 @@ class Tableau:
     @staticmethod
     def combinations(*tabs):
         """ returns all pairings of provided tabs that can be entered as params in Tableau.Y """
-
         def add_and_ret(d, k, v):
             d[k].append(v)
             return d
@@ -85,7 +84,6 @@ class Tableau:
 
             out.append([*raw_tab, [n]])
         return out
-
 
     def __init__(self, type, perm=None):
         self.type = type
@@ -158,7 +156,6 @@ class Tableau:
 
         return all(map(ascending_list, self.rows())) and all(map(ascending_list, self.columns()))
 
-
     def __repr__(self):
         return "Perm({0}{1})".format(self.perm, self.type)
 
@@ -171,3 +168,7 @@ class Tableau:
 
     def __eq__(self, other):
         return isinstance(other, Tableau) and other.type == self.type and other.perm == self.perm
+
+
+def symmetrizers_of_order(n):
+    return map(lambda p: Tableau.Y(*p), Tableau.combinations_of_order(n))
