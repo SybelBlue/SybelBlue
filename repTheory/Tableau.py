@@ -3,7 +3,7 @@ from functools import reduce
 from itertools import product
 
 from repTheory.BasicStructures import Perm, Algebraic
-from repTheory.groups import make_group
+from repTheory.helper_functions import make_group
 
 
 class SymmetrizerDict(dict):
@@ -162,8 +162,10 @@ class Tableau:
         return "Perm({0}{1})".format(self.perm, self.type)
 
     def fancy(self):
-        space = " " * len(str(self.size))
-        return "\n".join(space.join(map(str, row)) for row in self.rows())
+        max_len = len(str(self.size))
+        def entry_to_str(entry):
+            return str(entry) + (max_len - len(str(entry)) + 1) * " "
+        return "\n".join(''.join(map(entry_to_str, row)) for row in self.rows())
 
     def __hash__(self):
         return hash(str(self))

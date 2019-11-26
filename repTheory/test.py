@@ -2,9 +2,11 @@ from functools import reduce
 
 from repTheory.BasicStructures import Perm, Algebraic
 from repTheory.Tableau import Tableau
-from repTheory.groups import generateS
 
 from numpy import array
+
+from repTheory.helper_functions import array_to_tex, symmetrizers_of_order, generateS, symmetrizer_matrix_of_order, \
+    print_matrix_with_order
 
 assert Perm([1, 2]) == Perm([1, 2])  # basic equality test
 assert Perm([5, 4], [], [2, 3, 1]).scrub() == Perm([1, 2, 3], [4, 5])  # test scrubbing into standard form
@@ -94,26 +96,15 @@ for i, pair in enumerate(s_3_pairs):
     symmetrizers.append(y)
     print(i, pair, y)
 
-mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
-print(mat)
+# mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
+mat = symmetrizer_matrix_of_order(3, ordering)
+print_matrix_with_order(mat, ordering)
 
-# print()
-# print()
-# input("-- Continue to S4? ---")
-# print("---")
-# ordering = sorted(generateS(4), key=lambda perm: perm.key())
-# s_4_pairs = Tableau.combinations(
-#     Tableau([4]),
-#     Tableau([3, 1]),
-#     Tableau([3, 1], perm=Perm([3, 4])),
-#     Tableau([3, 1], perm=Perm([2, 3, 4])),
-#     Tableau([2, 2]),
-#     Tableau([2, 2], perm=Perm([2, 3])),
-#     Tableau([2, 1, 1]),
-#     Tableau([2, 1, 1], perm=Perm([3, 4])),
-#     Tableau([2, 1, 1], perm=Perm([2, 4, 3])),
-#     Tableau([1, 1, 1, 1])
-# )
+print()
+print()
+print("---")
+ordering = sorted(generateS(4), key=lambda perm: perm.key())
+# s_4_pairs = Tableau.combinations_of_order(4)
 # symmetrizers = list()
 # for i, pair in enumerate(s_4_pairs):
 #     y = Tableau.Y(*pair)
@@ -121,5 +112,5 @@ print(mat)
 #     print(i, pair, y)
 #
 #
-# mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
-# print(mat)
+mat = symmetrizer_matrix_of_order(4, ordering)
+print_matrix_with_order(mat, ordering)
