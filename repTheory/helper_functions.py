@@ -1,14 +1,15 @@
 from numpy import array
 
 from repTheory import Tableau
+from repTheory.group_helpers import generateS
 
 
 def symmetrizers_of_order(n):
     return map(lambda p: Tableau.Tableau.Y(*p), Tableau.Tableau.combinations_of_order(n))
 
 
-def symmetrizer_matrix_of_order(n, ordering):
-    return array(list(map(lambda s: s.to_coeffs(ordering), symmetrizers_of_order(n)))).transpose()
+def symmetrizer_matrix_of_order(n, ordering=None):
+    return array(list(map(lambda s: s.to_coeffs(generateS(n) if not ordering else ordering), symmetrizers_of_order(n)))).transpose()
 
 
 def print_matrix_with_order(matrix, ordering):

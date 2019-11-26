@@ -148,7 +148,7 @@ class Tableau:
         while old_type:
             type.append(len(old_type))
             old_type = [*filter(bool, map(lambda x: x - 1, old_type))]
-        return Tableau(type, perm=~self.perm)
+        return Tableau(type, perm=Perm.from_two_row([x for col in self.columns() for x in col]))
 
     def is_standard(self):
         def ascending_list(list):

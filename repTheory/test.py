@@ -1,5 +1,7 @@
 from functools import reduce
 
+import numpy
+
 from repTheory.BasicStructures import Perm, Algebraic
 from repTheory.Tableau import Tableau
 
@@ -99,6 +101,7 @@ for i, pair in enumerate(s_3_pairs):
 
 mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
 print_matrix_with_order(mat, ordering)
+# print(array_to_tex(mat))
 
 print()
 print()
@@ -113,3 +116,21 @@ ordering = sorted(generateS(4), key=lambda perm: perm.key())
 
 mat = symmetrizer_matrix_of_order(4, ordering)
 # print_matrix_with_order(mat, ordering)
+# print(array_to_tex(mat))
+
+test_elem = Tableau([3, 2]).symmetrizer()
+print(len(test_elem))
+
+s_5 = sorted(generateS(5), key=lambda perm: perm.key())
+print(next(x for x in s_5 if x not in test_elem))
+
+mat = symmetrizer_matrix_of_order(5, s_5)
+print_matrix_with_order(mat, s_5)
+print(numpy.sum(mat, axis=1))
+
+test_tableau = Tableau([4, 3, 3, 2], perm=Perm([4, 7, 5]))
+print(test_tableau.fancy())
+print()
+print(test_tableau.transpose().fancy())
+print()
+print(test_tableau.perm, '*', test_tableau.transpose().perm, '=', test_tableau.perm * test_tableau.transpose().perm)

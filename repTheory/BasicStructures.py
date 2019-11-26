@@ -313,3 +313,9 @@ class Algebraic:
 
     def to_coeffs(self, ordering):
         return [self[perm] for perm in ordering]
+
+    def __len__(self):
+        return len(list(filter(bool, self.terms.values())))
+
+    def __contains__(self, item):
+        return bool(self.terms[item])
