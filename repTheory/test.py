@@ -5,7 +5,8 @@ from repTheory.Tableau import Tableau
 
 from numpy import array
 
-from repTheory.helper_functions import array_to_tex, symmetrizers_of_order, generateS, symmetrizer_matrix_of_order, \
+from repTheory.group_helpers import generateS
+from repTheory.helper_functions import array_to_tex, symmetrizers_of_order, symmetrizer_matrix_of_order, \
     print_matrix_with_order
 
 assert Perm([1, 2]) == Perm([1, 2])  # basic equality test
@@ -88,7 +89,7 @@ print(test_Y.to_coeffs(ordering))
 
 print("---")
 s_3_pairs = Tableau.combinations_of_order(3)
-s_3_pairs[3], s_3_pairs[4] = s_3_pairs[4], s_3_pairs[3]
+# s_3_pairs[3], s_3_pairs[4] = s_3_pairs[4], s_3_pairs[3]
 print(*map(lambda p: (str(p[0]), str(p[1])), s_3_pairs))
 symmetrizers = list()
 for i, pair in enumerate(s_3_pairs):
@@ -96,8 +97,7 @@ for i, pair in enumerate(s_3_pairs):
     symmetrizers.append(y)
     print(i, pair, y)
 
-# mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
-mat = symmetrizer_matrix_of_order(3, ordering)
+mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
 print_matrix_with_order(mat, ordering)
 
 print()
@@ -110,7 +110,6 @@ ordering = sorted(generateS(4), key=lambda perm: perm.key())
 #     y = Tableau.Y(*pair)
 #     symmetrizers.append(y)
 #     print(i, pair, y)
-#
-#
+
 mat = symmetrizer_matrix_of_order(4, ordering)
-print_matrix_with_order(mat, ordering)
+# print_matrix_with_order(mat, ordering)

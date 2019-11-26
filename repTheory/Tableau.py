@@ -3,7 +3,7 @@ from functools import reduce
 from itertools import product
 
 from repTheory.BasicStructures import Perm, Algebraic
-from repTheory.helper_functions import make_group
+from repTheory.group_helpers import make_group
 
 
 class SymmetrizerDict(dict):
@@ -20,15 +20,16 @@ class Tableau:
     symmetrizer_map = SymmetrizerDict()
 
     @staticmethod
-    def Y(r, t):
-        if r.type != t.type:
+    def Y(s, t):
+        if s.type != t.type:
             raise TypeError("Can not compute Y for different cycle types")
         # if t in Tableau.symmetrizer_map:
-        #     sig = (r.perm * ~t.perm)
+        #     alpha = (s.perm * ~t.perm)
+        #     pi = ~t.perm * alpha * s.perm
         #     # print("optimized!")
-        #     return sig.inv_conj(Tableau.symmetrizer_map[str(t.type)])
+        #     return pi.inv_conj(Tableau.symmetrizer_map[str(t.type)])
 
-        return r.perm * t.symmetrizer()
+        return s.perm * t.symmetrizer()
 
     @staticmethod
     def all_two_cycles_of(lists):
@@ -65,7 +66,7 @@ class Tableau:
 
     @staticmethod
     def tableau_of_order(n):
-        return [*map(Tableau.from_lists, Tableau.raw_tableau_of_order(n))]
+        return list(map(Tableau.from_lists, Tableau.raw_tableau_of_order(n)))
 
     @staticmethod
     def raw_tableau_of_order(n):
@@ -85,7 +86,6 @@ class Tableau:
 
             out.append([*raw_tab, [n]])
         return out
-
 
     def __init__(self, type, perm=None):
         self.type = type
@@ -163,6 +163,7 @@ class Tableau:
 
     def fancy(self):
         max_len = len(str(self.size))
+
         def entry_to_str(entry):
             return str(entry) + (max_len - len(str(entry)) + 1) * " "
         return "\n".join(''.join(map(entry_to_str, row)) for row in self.rows())

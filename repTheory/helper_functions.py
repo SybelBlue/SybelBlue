@@ -1,28 +1,6 @@
-from math import factorial
 from numpy import array
 
 from repTheory import Tableau
-from repTheory.BasicStructures import Perm
-
-
-def generateS(n):
-    return make_group([Perm([i + 1, i + 2]) for i in range(n - 1)], group_limit=factorial(n))
-
-
-# def generateA(n):
-#     return make_group([Perm([i + 1, i + 2, i + 3]) for i in range(n - 2)], group_limit=factorial(n)/2)
-
-
-def make_group(generators, group_limit=10000):
-    group = [*generators]
-    last_len = 0
-    while last_len != len(group) and last_len < group_limit:
-        last_len = len(group)
-        for item in generators:
-            group.extend([*map(item, group)])
-            group = list(set(group))
-
-    return group
 
 
 def symmetrizers_of_order(n):
@@ -30,7 +8,7 @@ def symmetrizers_of_order(n):
 
 
 def symmetrizer_matrix_of_order(n, ordering):
-    return array([*map(lambda s: s.to_coeffs(ordering), symmetrizers_of_order(n))]).transpose()
+    return array(list(map(lambda s: s.to_coeffs(ordering), symmetrizers_of_order(n)))).transpose()
 
 
 def print_matrix_with_order(matrix, ordering):
