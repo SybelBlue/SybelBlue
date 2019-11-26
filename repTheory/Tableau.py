@@ -32,31 +32,29 @@ class Tableau:
 
     @staticmethod
     def all_two_cycles_of(lists):
-        out = list()
+        empty = True
         for row in lists:
             for i in range(len(row) - 1):
-                out.append(Perm([row[i], row[i + 1]]))
-        if not len(out):
-            out.append(Perm())
-        return out
+                empty = False
+                yield Perm([row[i], row[i + 1]])
+        if empty:
+            yield Perm()
 
     @staticmethod
     def combinations_of_order(n):
-        return Tableau.combinations(*Tableau.tableau_of_order(n))
+        return Tableau.combinations(Tableau.tableau_of_order(n))
 
     @staticmethod
-    def combinations(*tabs):
+    def combinations(tabs):
         """ returns all pairings of provided tabs that can be entered as params in Tableau.Y """
         def add_and_ret(d, k, v):
             d[k].append(v)
             return d
 
-        out = []
         groupings = reduce(lambda d, tab: add_and_ret(d, str(tab.type), tab), tabs, defaultdict(list)).values()
         for grouping in groupings:
             for pair in product(grouping, grouping):
-                out.append(pair)
-        return out
+                yield pair
 
     @staticmethod
     def from_lists(rows):
@@ -94,33 +92,28 @@ class Tableau:
         return " | ".join(" ".join(map(str, row)) for row in self.rows())
 
     def rows(self, type_rows=False):
-        out = []
         last = 1
         for n in self.type:
             current = []
             for _ in range(n):
                 current.append(last if type_rows else self.perm(last))
                 last += 1
-            out.append(current)
-        return out
+            yield current
 
     def row_generators(self):
         return Tableau.all_two_cycles_of(self.rows())
 
     def columns(self, type_cols=False):
-        cols = []
         if not len(self.type):
-            return cols
-        rows = self.rows(type_rows=type_cols)
+            return
+        rows = [*self.rows(type_rows=type_cols)]
         for i in range(self.type[0]):
             col = []
             for j in range(len(self.type)):
                 if len(rows[j]) <= i:
                     break
                 col.append(rows[j][i])
-            cols.append(col)
-
-        return cols
+            yield col
 
     def col_generators(self):
         return Tableau.all_two_cycles_of(self.columns())
@@ -141,12 +134,13 @@ class Tableau:
         return self.perm * self.type_symmetrizer()
 
     def transpose(self):
+        """ only transposes type! """
         type = []
         old_type = self.type.copy()
         while old_type:
             type.append(len(old_type))
             old_type = [*filter(bool, map(lambda x: x - 1, old_type))]
-        return Tableau(type, perm=~self.perm)
+        return Tableau(type)
 
     def is_standard(self):
         def ascending_list(list):
@@ -160,8 +154,12 @@ class Tableau:
         return "Perm({0}{1})".format(self.perm, self.type)
 
     def fancy(self):
-        space = " " * len(str(self.size))
-        return "\n".join(space.join(map(str, row)) for row in self.rows())
+        max_len = len(str(self.size))
+
+        def stringify(n):
+            return str(n) + " " * (max_len - len(str(n)) + 1)
+
+        return "\n".join(''.join(map(stringify, row)) for row in self.rows())
 
     def __hash__(self):
         return hash(str(self))
@@ -172,3 +170,7 @@ class Tableau:
 
 def symmetrizers_of_order(n):
     return map(lambda p: Tableau.Y(*p), Tableau.combinations_of_order(n))
+
+
+def convert_to_TeX(array):
+    return " \\\\\n".join(map(lambda row: " & ".join(map(str, row)), array))

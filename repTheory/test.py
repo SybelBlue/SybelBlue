@@ -1,7 +1,7 @@
 from functools import reduce
 
 from repTheory.BasicStructures import Perm, Algebraic
-from repTheory.Tableau import Tableau, symmetrizers_of_order
+from repTheory.Tableau import Tableau, symmetrizers_of_order, convert_to_TeX
 from repTheory.groups import generateS
 
 from numpy import array
@@ -85,7 +85,7 @@ print(test_tableau.symmetrizer().to_coeffs(ordering))
 print(test_Y.to_coeffs(ordering))
 
 print("---")
-s_3_pairs = Tableau.combinations_of_order(3)
+s_3_pairs = [*Tableau.combinations_of_order(3)]
 s_3_pairs[3], s_3_pairs[4] = s_3_pairs[4], s_3_pairs[3]
 print(*map(lambda p: (str(p[0]), str(p[1])), s_3_pairs))
 symmetrizers = list()
@@ -96,6 +96,7 @@ for i, pair in enumerate(s_3_pairs):
 
 mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
 print(mat)
+print(convert_to_TeX(mat))
 
 print()
 print()
