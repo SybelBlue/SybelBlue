@@ -140,7 +140,7 @@ class Tableau:
         return y
 
     def symmetrizer(self):
-        return self.perm * self.type_symmetrizer()
+        return self.perm.inv_conj(self.type_symmetrizer())
 
     def transpose(self):
         type = []
