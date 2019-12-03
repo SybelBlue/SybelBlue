@@ -6,10 +6,6 @@ class Perm:
     """ Assumed to be disjoint on init """
 
     @staticmethod
-    def to_two_row(perm):
-        return [perm(i + 1) for i in range(perm.max_value())]
-
-    @staticmethod
     def from_two_row(second_row):
         remaining = [x + 1 for x in range(len(second_row))]
         cycles = []
@@ -121,6 +117,9 @@ class Perm:
                 return Perm()
             return Perm.from_lists([*map(self, cycle)] for cycle in other.cycles).scrub()
         return self * other * ~self
+
+    def to_two_row(self):
+        return [self(i + 1) for i in range(self.max_value())]
 
     def __call__(self, *args, **kwargs):
         """ so that permutations can be applied like functions to ints or other perms """

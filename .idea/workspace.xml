@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f738909a-4d35-48fe-a7bf-970a065d8622" name="Default" comment="Split file to avoid import issues">
+    <list default="true" id="f738909a-4d35-48fe-a7bf-970a065d8622" name="Default" comment="General improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repTheory/BasicStructures.py" beforeDir="false" afterPath="$PROJECT_DIR$/repTheory/BasicStructures.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repTheory/Tableau.py" beforeDir="false" afterPath="$PROJECT_DIR$/repTheory/Tableau.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repTheory/group_helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/repTheory/group_helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repTheory/Tableau.py" beforeDir="false" afterPath="$PROJECT_DIR$/repTheory/Tableaux.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repTheory/helper_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/repTheory/helper_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repTheory/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/repTheory/test.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,18 +91,6 @@
       <recent name="C:\Users\lbcdn\PycharmProjects\SybelBlue\main\conn-beyond" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Python.test">
     <configuration name="BasicStructures" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SybelBlue" />
@@ -163,7 +149,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/repTheory/Tableau.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\lbcdn\PycharmProjects\SybelBlue\repTheory\Tableaux.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -194,7 +180,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="groups" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="helper_functions" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SybelBlue" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -207,7 +193,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/repTheory/groups.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/repTheory/helper_functions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -242,19 +228,31 @@
       <item itemvalue="Python.L_Sys_Interpreter" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.Tableau" />
-      <item itemvalue="Python.groups" />
       <item itemvalue="Python.BasicStructures" />
       <item itemvalue="Python.group_helpers" />
+      <item itemvalue="Python.helper_functions" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.helper_functions" />
         <item itemvalue="Python.Tableau" />
         <item itemvalue="Python.group_helpers" />
         <item itemvalue="Python.BasicStructures" />
-        <item itemvalue="Python.groups" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="StructureViewFactory">
     <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
@@ -336,7 +334,11 @@
       <workItem from="1574454205856" duration="3183000" />
       <workItem from="1574466541613" duration="3290000" />
       <workItem from="1574475349319" duration="28729000" />
-      <workItem from="1574782192056" duration="8451000" />
+      <workItem from="1574782192056" duration="8477000" />
+      <workItem from="1575159665825" duration="2091000" />
+      <workItem from="1575388350470" duration="1176000" />
+      <workItem from="1575389620215" duration="3871000" />
+      <workItem from="1575407350611" duration="2407000" />
     </task>
     <task id="LOCAL-00001" summary="Basic functioning of Algebraic and Perm">
       <created>1574396237611</created>
@@ -429,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574788305836</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="General improvements">
+      <created>1574801918204</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1574801918204</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -474,7 +483,42 @@
     <MESSAGE value="Hopefully fixed the final bug" />
     <MESSAGE value="Added some pretty printing" />
     <MESSAGE value="Split file to avoid import issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Split file to avoid import issues" />
+    <MESSAGE value="General improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="General improvements" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="250" key="GridCell.Tab.0.bottom" timestamp="1575409739843">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575409739843" />
+    <state width="1877" height="250" key="GridCell.Tab.0.center" timestamp="1575409739843">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="250" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575409739843" />
+    <state width="1877" height="250" key="GridCell.Tab.0.left" timestamp="1575409739842">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="250" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575409739842" />
+    <state width="1877" height="250" key="GridCell.Tab.0.right" timestamp="1575409739843">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="250" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575409739843" />
+    <state width="1877" height="331" key="GridCell.Tab.1.bottom" timestamp="1575408757675">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="331" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575408757675" />
+    <state width="1877" height="331" key="GridCell.Tab.1.center" timestamp="1575408757674">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="331" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575408757674" />
+    <state width="1877" height="331" key="GridCell.Tab.1.left" timestamp="1575408757674">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="331" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575408757674" />
+    <state width="1877" height="331" key="GridCell.Tab.1.right" timestamp="1575408757674">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="331" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575408757674" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -535,20 +579,21 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SybelBlue$Polynomial.coverage" NAME="Polynomial Coverage Results" MODIFIED="1555877972657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/SybelBlue$groups.coverage" NAME="groups Coverage Results" MODIFIED="1574449057809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
     <SUITE FILE_PATH="coverage/SybelBlue$HW8Scratch.coverage" NAME="HW8Scratch Coverage Results" MODIFIED="1557002292965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
-    <SUITE FILE_PATH="coverage/SybelBlue$GroupBuilder.coverage" NAME="GroupBuilder Coverage Results" MODIFIED="1567776214532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
-    <SUITE FILE_PATH="coverage/SybelBlue$group_helpers.coverage" NAME="group_helpers Coverage Results" MODIFIED="1574787911682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
+    <SUITE FILE_PATH="coverage/SybelBlue$BasicStructures.coverage" NAME="BasicStructures Coverage Results" MODIFIED="1574449317990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
+    <SUITE FILE_PATH="coverage/SybelBlue$Tableau.coverage" NAME="Tableau Coverage Results" MODIFIED="1575389305743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
+    <SUITE FILE_PATH="coverage/SybelBlue$helper_functions.coverage" NAME="helper_functions Coverage Results" MODIFIED="1575408820908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
     <SUITE FILE_PATH="coverage/SybelBlue$Misc.coverage" NAME="Misc Coverage Results" MODIFIED="1560490749867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
-    <SUITE FILE_PATH="coverage/SybelBlue$FinalScratch.coverage" NAME="FinalScratch Coverage Results" MODIFIED="1557194598661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
     <SUITE FILE_PATH="coverage/SybelBlue$LaTeXFunctions.coverage" NAME="LaTeXFunctions Coverage Results" MODIFIED="1556313705017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
-    <SUITE FILE_PATH="coverage/SybelBlue$test.coverage" NAME="test Coverage Results" MODIFIED="1574800225632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
-    <SUITE FILE_PATH="coverage/SybelBlue$Tableau.coverage" NAME="Tableau Coverage Results" MODIFIED="1574788103254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
+    <SUITE FILE_PATH="coverage/SybelBlue$GroupBuilder.coverage" NAME="GroupBuilder Coverage Results" MODIFIED="1567776214532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Abstract" />
     <SUITE FILE_PATH="coverage/SybelBlue$Z_2Poly.coverage" NAME="Z_2Poly Coverage Results" MODIFIED="1555987145760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
-    <SUITE FILE_PATH="coverage/SybelBlue$maze_maker.coverage" NAME="maze_maker Coverage Results" MODIFIED="1558846647577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
     <SUITE FILE_PATH="coverage/SybelBlue$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1574447976326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
     <SUITE FILE_PATH="coverage/SybelBlue$HW7Scratch.coverage" NAME="HW7Scratch Coverage Results" MODIFIED="1555548524625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
-    <SUITE FILE_PATH="coverage/SybelBlue$groups.coverage" NAME="groups Coverage Results" MODIFIED="1574449057809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
-    <SUITE FILE_PATH="coverage/SybelBlue$BasicStructures.coverage" NAME="BasicStructures Coverage Results" MODIFIED="1574449317990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
+    <SUITE FILE_PATH="coverage/SybelBlue$group_helpers.coverage" NAME="group_helpers Coverage Results" MODIFIED="1574787911682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
+    <SUITE FILE_PATH="coverage/SybelBlue$maze_maker.coverage" NAME="maze_maker Coverage Results" MODIFIED="1558846647577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
+    <SUITE FILE_PATH="coverage/SybelBlue$test.coverage" NAME="test Coverage Results" MODIFIED="1575409739819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/repTheory" />
+    <SUITE FILE_PATH="coverage/SybelBlue$FinalScratch.coverage" NAME="FinalScratch Coverage Results" MODIFIED="1557194598661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms" />
+    <SUITE FILE_PATH="coverage/SybelBlue$Polynomial.coverage" NAME="Polynomial Coverage Results" MODIFIED="1555877972657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
   </component>
 </project>

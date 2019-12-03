@@ -3,13 +3,12 @@ from functools import reduce
 import numpy
 
 from repTheory.BasicStructures import Perm, Algebraic
-from repTheory.Tableau import Tableau
+from repTheory.Tableaux import Tableau
 
 from numpy import array
 
 from repTheory.group_helpers import generateS
-from repTheory.helper_functions import array_to_tex, symmetrizers_of_order, symmetrizer_matrix_of_order, \
-    print_matrix_with_order
+from repTheory.helper_functions import array_to_tex, symmetrizer_matrix_of_order, print_matrix_with_order, RSK
 
 assert Perm([1, 2]) == Perm([1, 2])  # basic equality test
 assert Perm([5, 4], [], [2, 3, 1]).scrub() == Perm([1, 2, 3], [4, 5])  # test scrubbing into standard form
@@ -61,6 +60,8 @@ assert Tableau([2, 1]) == Tableau.from_lists([[1, 2], [3]])
 assert Tableau([2, 1], perm=Perm([2, 3])) == Tableau.from_lists([[1, 3], [2]])
 assert all(map(lambda t: t.is_standard(), Tableau.tableau_of_order(5)))
 
+assert RSK('1364752', preformatted=True) == RSK(Perm.from_two_row([1, 3, 6, 4, 7, 5, 2]))
+
 # print(*sorted(generateS(4),  key=lambda perm: perm.key()))
 # print(*map(lambda p: p.key(), sorted(generateS(4),  key=lambda perm: perm.key())))
 # print(len({*map(lambda p: p.key(), sorted(generateS(4),  key=lambda perm: perm.key()))}))
@@ -89,6 +90,15 @@ print(ordering)
 print(test_tableau.symmetrizer().to_coeffs(ordering))
 print(test_Y.to_coeffs(ordering))
 
+
+def get_stats_on_mat(mat):
+    print('-------- STATS FOR NERDS ----------')
+    print(numpy.sum(mat, axis=0))
+    print("det:", numpy.linalg.det(mat))
+    print("tr:", numpy.trace(mat))
+    print('----------------------------------')
+
+
 print("---")
 s_3_pairs = Tableau.combinations_of_order(3)
 # s_3_pairs[3], s_3_pairs[4] = s_3_pairs[4], s_3_pairs[3]
@@ -100,8 +110,9 @@ for i, pair in enumerate(s_3_pairs):
     print(i, pair, y)
 
 mat = array([*map(lambda s: s.to_coeffs(ordering), symmetrizers)]).transpose()
+get_stats_on_mat(mat)
 print_matrix_with_order(mat, ordering)
-# print(array_to_tex(mat))
+print(array_to_tex(mat))
 
 print()
 print()
@@ -113,24 +124,34 @@ ordering = sorted(generateS(4), key=lambda perm: perm.key())
 #     y = Tableau.Y(*pair)
 #     symmetrizers.append(y)
 #     print(i, pair, y)
-
+# ordering = generateS(4)
 mat = symmetrizer_matrix_of_order(4, ordering)
-# print_matrix_with_order(mat, ordering)
-# print(array_to_tex(mat))
+get_stats_on_mat(mat)
+print_matrix_with_order(mat, ordering)
+print(array_to_tex(mat))
 
 test_elem = Tableau([3, 2]).symmetrizer()
 print(len(test_elem))
 
-s_5 = sorted(generateS(5), key=lambda perm: perm.key())
-print(next(x for x in s_5 if x not in test_elem))
+# s_5 = sorted(generateS(5), key=lambda perm: perm.key())
+# print(next(x for x in s_5 if x not in test_elem))
+# mat = symmetrizer_matrix_of_order(5, s_5)
+# print_matrix_with_order(mat, s_5)
+# get_stats_on_mat(mat)
 
-mat = symmetrizer_matrix_of_order(5, s_5)
-print_matrix_with_order(mat, s_5)
-print(numpy.sum(mat, axis=1))
+# test_tableau = Tableau([4, 3, 3, 2], perm=Perm([4, 7, 5]))
+# print(test_tableau.fancy())
+# print()
+# print(test_tableau.transpose().fancy())
+# print()
+# print(test_tableau.perm, '*', test_tableau.transpose().perm, '=', test_tableau.perm * test_tableau.transpose().perm)
 
-test_tableau = Tableau([4, 3, 3, 2], perm=Perm([4, 7, 5]))
-print(test_tableau.fancy())
-print()
-print(test_tableau.transpose().fancy())
-print()
-print(test_tableau.perm, '*', test_tableau.transpose().perm, '=', test_tableau.perm * test_tableau.transpose().perm)
+# cycle_type = [3, 1]
+# ordering = generateS(4)
+# print(list(map(lambda cycle: Tableau.Y(Tableau(cycle_type), Tableau(cycle_type, perm=Perm([3, 4])))[cycle], ordering)))
+# print(list(map(lambda cycle: Tableau.Y(Tableau(cycle_type).transpose(), Tableau(cycle_type, perm=Perm([3, 4])).transpose())[cycle], ordering)))
+
+# print(*map(lambda tab: tab.fancy(), RSK('1364752', preformatted=True)), sep='\n')
+test_cycle = Perm.from_two_row([1, 3, 6, 4, 7, 5, 2])
+print(test_cycle, *RSK(test_cycle), sep='\n')
+
