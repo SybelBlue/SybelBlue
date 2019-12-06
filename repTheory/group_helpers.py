@@ -1,3 +1,4 @@
+from itertools import product
 from math import factorial
 
 from repTheory.BasicStructures import Perm

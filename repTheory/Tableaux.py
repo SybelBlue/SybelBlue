@@ -29,7 +29,7 @@ class Tableau:
         #     # print("optimized!")
         #     return pi.inv_conj(Tableau.symmetrizer_map[str(t.type)])
 
-        return s.perm * t.symmetrizer()#.normalized()
+        return t.perm * s.symmetrizer()#.normalized()
 
     @staticmethod
     def all_two_cycles_of(lists):
